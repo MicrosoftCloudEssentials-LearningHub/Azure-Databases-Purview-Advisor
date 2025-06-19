@@ -136,6 +136,17 @@ Assumptions:
 > [!NOTE]
 > In the case of processing 1 GB of data, the cost structure is primarily influenced by the time consumed by the system to handle the data rather than the actual volume of the data itself. For instance, scanning 1 GB of data takes 5 minutes, and processing it takes 0.1 hours. These time durations directly impact the costs associated with scanning and processing. Some costs, such as the `Total Cost for Data Map`, are fixed and `remain constant regardless of the data volume`, while other costs, like the `Total Cost for Scanning` and `Total Cost for Resource Set`, `vary based on the time taken to process the data`. For example, scanning 1 GB costs $1.67, which is calculated based on the 5 minutes of scanning time. The overall monthly cost is a summation of all these costs, including both fixed and variable components. Therefore, even if the data volume is small, if the system takes longer to process it, the costs could be higher. Efficient processing can reduce costs even for larger volumes of data. `This highlights that the cost is more related to the system's handling time rather than the amount of data being processed.`
 
+## How to use the Azure Pricing Calculator
+
+> A approach for estimating your **Azure Purview costs** is to use the official [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/). This ensures your estimate reflects the **latest pricing**, **currency**, and **service configurations**. It allows you to:
+
+- Select **Microsoft Purview** services directly.
+- Input your **expected scan durations**, **vCore usage**, and **resource set processing hours**.
+- Include **Managed Virtual Network** and **data transfer** costs if applicable.
+- Get a **real-time, region-specific estimate** (e.g., for Costa Rica or any other region).
+
+  https://github.com/user-attachments/assets/05521c11-6666-4fc8-9046-14d6958798ef
+
 ## Additional Considerations
 
 - **Optimize Scan Frequency**: Reduce the frequency of scans to lower the overall cost by customizing Scan Rule Sets to control cost.This enable sto fine-tune the time scans take. Find below the steps to create and customize scan rule sets:
@@ -147,6 +158,8 @@ Assumptions:
    6. On the Select classification rules page, select or clear the System rules classification rule checkboxes globally by category or individually.
 - **Efficient Data Management**: Use incremental loads and data partitioning to minimize scan duration.
 - **Monitor Usage**: Regularly monitor your usage and costs using Azure Cost Management tools to identify areas for optimization.
+
+
 
 <div align="center">
   <h3 style="color: #4CAF50;">Total Visitors</h3>
