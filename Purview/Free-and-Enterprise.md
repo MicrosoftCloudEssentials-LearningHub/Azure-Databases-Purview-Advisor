@@ -1,4 +1,4 @@
-# Microsft Purview Free \& Enterprise - Overview
+# Microsoft Purview Free \& Enterprise - Overview
 
 Costa Rica
 
