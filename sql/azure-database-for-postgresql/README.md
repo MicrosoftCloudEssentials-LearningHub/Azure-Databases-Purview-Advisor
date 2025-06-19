@@ -46,7 +46,7 @@ cur.close()
 conn.close()
 ```
 
-## **Implications of Using PostgreSQL Extensions in Azure
+## Implications of Using PostgreSQL Extensions in Azure
 
 > PostgreSQL extensions can dramatically expand database functionality and improve application performance within **Azure Database for PostgreSQL – Flexible Server**.
 
