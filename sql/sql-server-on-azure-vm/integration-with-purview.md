@@ -94,7 +94,7 @@ Last updated: 2025-06-19
 > - **Resource Set Processing** (based on processing time)
 
 > [!TIP]
-> Click here to understand more about [Azure Purview Cost Estimation](./Purview/Cost-Estimation.md)
+> Click here to understand more about [Azure Purview Cost Estimation](../../Purview/Cost-Estimation.md)
 
 ### Example Monthly Budget
 
