@@ -32,8 +32,6 @@ Last updated: 2025-06-19
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
     - [Example: DLP Policy for Customer PII](#example-dlp-policy-for-customer-pii)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
-    - [Cost Components](#cost-components)
-    - [Example Monthly Budget](#example-monthly-budget)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
     - [Steps to Integrate](#steps-to-integrate)
@@ -83,10 +81,6 @@ Last updated: 2025-06-19
    Use Purview’s monitoring dashboard to track policy violations and data access patterns.
 
 ## Cost Management and Budgeting
-
-> Integrating with Purview introduces additional costs for scanning, classification, and governance. Below is a breakdown and example budget.
-
-### Cost Components
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
