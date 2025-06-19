@@ -86,21 +86,23 @@ Last updated: 2025-06-19
 
 ### Cost Components
 
-- **Microsoft Purview Account:**  
-  Billed per vCore-hour and per GB of data processed during scans.
-- **SQL Server on Azure VM:**  
-  Standard compute, storage, and backup charges.
-- **Data Scanning:**  
-  Additional charges for scanning and classifying data assets.
+> **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
+> The pricing structure is based on:
+> - **Data Map** (capacity units, always-on)
+> - **Scanning** (pay-as-you-go, based on vCore usage and scan duration)
+> - **Managed Virtual Network** and **API/Data Transfer** costs for cross-cloud governance
+> - **Resource Set Processing** (based on processing time)
+
+> [!TIP]
+> Click here to understand more about [Azure Purview Cost Estimation](./Purview-Cost-Estimation.md)
 
 ### Example Monthly Budget
 
 | Resource                        | Estimated Monthly Cost |
 |----------------------------------|-----------------------|
 | Purview (2 vCores, light usage)  | $300                  |
-| SQL Server on Azure VM (Basic)   | $50                   |
 | Data Scanning (100GB/month)      | $20                   |
-| **Total**                        | **$370**              |
+| **Total**                        | **$320**              |
 
 > [!NOTE]
 > - Costs may vary based on region, scan frequency, and data volume.
