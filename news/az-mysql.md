@@ -31,7 +31,14 @@ Last updated: 2025-06-03
 <summary><b>Table of Content</b> (Click to expand)</summary>
 
 - [Latest Announcements](#latest-announcements)
+    - [Microsoft Build 2025](#microsoft-build-2025)
+    - [May 2025 Release](#may-2025-release)
+    - [Microsoft Ignite 2024](#microsoft-ignite-2024)
+    - [Microsoft Build 2024](#microsoft-build-2024)
 - [Feature Highlights](#feature-highlights)
+    - [High Availability & Disaster Recovery](#high-availability--disaster-recovery)
+    - [Security & Compliance](#security--compliance)
+    - [Developer Productivity](#developer-productivity)
 - [Best Practices](#best-practices)
 
 </details>
