@@ -25,6 +25,18 @@ Last updated: 2025-06-03
 
 </details>
 
+<details>
+<summary>Table of Content</summary>
+
+- [Benefits](#benefits)
+- [Use Cases](#use-cases)
+- [Sample Code Snippet](#sample-code-snippet)
+- [Implications of Running Oracle Workloads on Azure vs. On-Premises](#implications-of-running-oracle-workloads-on-azure-vs-on-premises)
+- [Integration with Azure Backup and Azure Site Recovery](#integration-with-azure-backup-and-azure-site-recovery)
+- [Performance Tuning Options for Oracle Database on Azure](#performance-tuning-options-for-oracle-database-on-azure)
+
+</details>
+
 ## Benefits
 - **Flexibility**: Offers full control over the database environment, allowing for customization based on specific application needs.
 - **High Availability**: Ensures that Oracle applications remain available with built-in redundancy and failover capabilities.
@@ -33,7 +45,6 @@ Last updated: 2025-06-03
 ## Use Cases
 - Running core enterprise Oracle applications that require high availability and performance.
 - Migrating legacy Oracle applications to the cloud for improved scalability and management.
-
 
 ## Sample Code Snippet
 
@@ -60,7 +71,6 @@ CREATE TABLE employees (
 - **Operational Overhead**: Azure automates patching, backup, and monitoring, reducing the need for manual intervention.
 - **Resiliency Model**: Azure emphasizes **MTTR (Mean Time to Recovery)** over MTBF, shifting the focus from preventing failure to recovering quickly from it.
 - **Architecture Considerations**: Oracle workloads often rely on features like AWR, Exadata, or RAC. Azure requires re-architecting or replacing some of these with cloud-native equivalents.
-
 
 ## Integration with Azure Backup and Azure Site Recovery
 
