@@ -23,6 +23,20 @@ Last updated: 2025-06-03
 
 </details>
 
+<details>
+<summary>Table of Content</summary>
+
+- [Features](#features)
+- [Use Cases](#use-cases)
+- [Sample Code Snippet](#sample-code-snippet)
+- [Using Azure Database for MySQL in a Microservices Architecture](#using-azure-database-for-mysql-in-a-microservices-architecture)
+- [Performance Tuning Options in Azure Database for MySQL](#performance-tuning-options-in-azure-database-for-mysql)
+- [Security Features and Compliance Standards](#security-features-and-compliance-standards)
+- [Comparing Azure Database for MySQL with Other Azure Managed Databases](#comparing-azure-database-for-mysql-with-other-azure-managed-databases)
+- [Strategies for Migrating MySQL Databases to Azure](#strategies-for-migrating-mysql-databases-to-azure)
+
+</details>
+
 ## Features
 
 - **Open-source Compatibility**: Supports MySQL community edition, allowing developers to use familiar tools and frameworks.
