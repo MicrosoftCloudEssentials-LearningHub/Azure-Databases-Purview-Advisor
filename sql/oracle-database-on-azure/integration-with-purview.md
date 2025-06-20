@@ -29,7 +29,6 @@ Last updated: 2025-06-19
     - [Enabling Unity Data Governance](#enabling-unity-data-governance)
     - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
-    - [Example: DLP Policy for Customer PII](#example-dlp-policy-for-customer-pii)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
     - [Cost Components](#cost-components)
     - [Example Monthly Budget](#example-monthly-budget)
@@ -43,7 +42,7 @@ Last updated: 2025-06-19
 
 ## How to Integrate Oracle Database on Azure with Purview
 
-### 1. Registering the Oracle Database in Purview
+### Registering the Oracle Database in Purview
 
 - Go to the [Microsoft Purview Studio](https://web.purview.azure.com/).
 - Navigate to **Data Map** > **Register** > **Oracle Database on Azure**.
@@ -51,13 +50,13 @@ Last updated: 2025-06-19
 - Set up a scan rule set to define what metadata and classifications to extract.
 - Schedule regular scans to keep metadata and classifications up to date.
 
-### 2. Enabling Unity Data Governance
+### Enabling Unity Data Governance
 
 - Use **Unity Catalog** within Purview to manage access policies, data lineage, and data sharing.
 - Assign roles such as Data Owner, Data Steward, and Data Consumer to control access and responsibilities.
 - Track data movement and transformations for compliance and auditing.
 
-### 3. Data Classification and Labeling
+### Data Classification and Labeling
 
 - Apply built-in or custom classifiers to automatically detect and label sensitive data (e.g., PII, financial data).
 - Use labels to drive downstream policies such as Data Loss Prevention (DLP) and access controls.
@@ -66,20 +65,50 @@ Last updated: 2025-06-19
 
 > DLP projects in Purview help you identify, monitor, and protect sensitive data within your Oracle databases.
 
-### Example: DLP Policy for Customer PII
+<details>
+<summary><b>E.g: DLP Policy for GDPR Right to Be Forgotten</b> (Click to expand)</summary>
 
-> Prevent unauthorized export of customer personally identifiable information (PII).
+> Enforce data erasure requests across customer-related tables in Oracle.
 
 **Steps:**
-1. **Create a DLP Policy:**  
-   In Purview, define a policy targeting tables/columns with PII (e.g., email, SSN).
-2. **Define Detection Rules:**  
-   Use built-in or custom classifiers to identify PII fields.
+1. **Create a DLP Policy:** Monitor and respond to deletion requests for tables like `CUSTOMERS`, `CONTACT_LOGS`, and `ACCOUNT_HISTORY`.
+2. **Define Detection Rules:** Use Purview’s data subject tagging to flag all relevant personal data fields.
 3. **Set Actions:**  
-   - Alert data owners when PII is accessed or exported.
-   - Optionally, block export or require additional approval for sensitive data.
-4. **Monitor and Audit:**  
-   Use Purview’s monitoring dashboard to track policy violations and data access patterns.
+   - Notify data stewards when retention period expires or deletion is requested.  
+   - Automatically flag noncompliant records.
+4. **Monitor and Audit:** Prove compliance via retention logs and erasure workflows.
+
+</details>
+
+<details>
+<summary><b>E.g: DLP Policy for Financial Reconciliation Data</b> (Click to expand)</summary>
+
+> Protect sensitive reconciliation and journal entry data from internal leaks.
+
+**Steps:**
+1. **Create a DLP Policy:** Focus on Oracle ERP data, such as `GL_JOURNALS`, `RECON_TABLES`, or `LEDGER_ENTRIES`.
+2. **Define Detection Rules:** Apply financial data classifiers or tag custom ERP schema elements.
+3. **Set Actions:**  
+   - Require managerial approval for exports over certain thresholds.  
+   - Redact financial summaries for non-finance roles.
+4. **Monitor and Audit:** Track peak financial period access and anomalous queries.
+
+</details>
+
+<details>
+<summary><b>E.g: DLP Policy for Clinical Trial Data (GxP Compliance)</b> (Click to expand)</summary>
+
+> Secure trial participant data, dosage logs, and test results hosted in Oracle schemas.
+
+**Steps:**
+1. **Create a DLP Policy:** Target schemas like `TRIAL_RESULTS`, `PATIENT_TRACKING`, or `MEDICATION_LOGS`.
+2. **Define Detection Rules:** Detect patient IDs, consent forms, and controlled substance indicators.
+3. **Set Actions:**  
+   - Encrypt output from trials unless accessed by certified trial managers.  
+   - Block trial data sharing outside approved vendors.
+4. **Monitor and Audit:** Export access reports for regulatory inspections.
+
+</details>
 
 ## Cost Management and Budgeting
 
