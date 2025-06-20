@@ -9,13 +9,24 @@ document.getElementById('advisor-form').addEventListener('submit', async (event)
     const integrationNeeds = document.getElementById('integration-needs').value;
     const security = document.getElementById('security').value;
     const budget = document.getElementById('budget').value;
-    const deploymentModel = document.getElementById('deployment-model').value;
     const useCase = document.getElementById('use-case').value;
+    const backupRecovery = document.getElementById('backup-recovery').value;
 
     const response = await fetch('http://your-backend-url/recommend', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ data_volume: dataVolume, data_type: dataType, latency, scalability, consistency, integration_needs: integrationNeeds, security, budget, deployment_model: deploymentModel, use_case: useCase })
+        body: JSON.stringify({ 
+            data_volume: dataVolume, 
+            data_type: dataType, 
+            latency, 
+            scalability, 
+            consistency, 
+            integration_needs: integrationNeeds, 
+            security, 
+            budget, 
+            use_case: useCase, 
+            backup_recovery: backupRecovery 
+        })
     });
 
     const result = await response.json();

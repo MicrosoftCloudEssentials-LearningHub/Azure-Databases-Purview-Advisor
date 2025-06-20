@@ -26,7 +26,7 @@ Last updated: 2025-06-20
 The **Azure Databases Advisor Tool** is designed to help users select the most suitable Azure database service based on their specific use case. It provides recommendations by analyzing user inputs such as data type, scalability needs, latency requirements, and more.
 
 This tool consists of:
-- **Static Frontend**: A web-based interface for users to input their requirements and view recommendations.
+- **Static Frontend**: A web-based interface for users to input their requirements and view recommendations. The frontend operates independently and uses hardcoded logic for recommendations.
 - **Optional Backend**: A Flask API that processes user inputs and provides dynamic recommendations. The backend must be deployed separately to enable advanced functionality.
 
 ## Features
@@ -78,15 +78,29 @@ The backend (Flask API) processes user inputs and generates recommendations dyna
 
 The tool now includes the following questions to refine recommendations:
 - **Data Volume**: Expected size and growth.
+  - Options: `<10GB`, `10GB-1TB`, `>1TB`.
 - **Data Type**: Structured, semi-structured, or unstructured.
-- **Performance Requirements**: Latency and throughput needs.
-- **Scalability**: Horizontal or vertical scaling, global distribution.
+  - Options: `Structured`, `Semi-structured`, `Unstructured`.
+- **Latency Requirements**: Maximum acceptable delay for database operations.
+  - Options: `<10ms`, `10-100ms`, `>100ms`.
+- **Scalability Needs**: Horizontal or vertical scaling, global distribution.
+  - Options: `Global`, `Local`.
 - **Consistency Model**: Strong or eventual consistency.
+  - Options: `Strong`, `Eventual`.
 - **Integration Needs**: Compatibility with Azure services.
-- **Security and Compliance**: Encryption, role-based access control, compliance requirements.
+  - Options: `Yes`, `No`.
+- **Security Requirements**: Encryption, role-based access control, compliance requirements.
+  - Options: `Encryption`, `RBAC`, `Compliance`.
 - **Budget Constraints**: Monthly budget for database services.
-- **Deployment Model**: Fully managed (PaaS), self-hosted (IaaS), or serverless.
+  - Options: `<100 USD`, `100-500 USD`, `>500 USD`.
 - **Use Case Specifics**: OLTP, OLAP, or AI/ML workloads.
+  - Options: `OLTP`, `OLAP`, `AI/ML`.
+- **Backup and Disaster Recovery**: Automated backups and disaster recovery options.
+  - Options: `Yes`, `No`.
+- **Query Complexity**: Expected complexity of database queries.
+  - Options: `Simple`, `Moderate`, `Complex`.
+- **Data Retention Policy**: Retention period for data.
+  - Options: `Short-term`, `Medium-term`, `Long-term`.
 
 ## Example Recommendation Flow
 
