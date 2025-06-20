@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Database Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Azure Database Selector</h1>
+    </header>
+    <main>
+        <form id="database-selector-form">
+            <label for="data-type">Type of Data:</label>
+            <select id="data-type" name="data-type">
+                <option value="sql">SQL</option>
+                <option value="nosql">NoSQL</option>
+            </select>
+
+            <label for="scalability">Scalability Needs:</label>
+            <select id="scalability" name="scalability">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+
+            <label for="purview-integration">Integration with Purview:</label>
+            <select id="purview-integration" name="purview-integration">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="button" id="recommend-button">Recommend Database</button>
+        </form>
+
+        <section id="recommendation">
+            <h2>Recommended Database</h2>
+            <p id="recommendation-result">Select your preferences to see recommendations.</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
