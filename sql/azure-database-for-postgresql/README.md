@@ -12,6 +12,19 @@ Last updated: 2025-06-03
 
 > Azure Database for PostgreSQL is a fully managed database service that provides built-in high availability, automated backups, and scaling capabilities. It is designed to handle mission-critical workloads while ensuring security and compliance.
 
+<details>
+<summary>Table of Content</summary>
+
+- [Features](#features)
+- [Use Cases](#use-cases)
+- [Sample Code Snippet](#sample-code-snippet)
+- [Implications of Using PostgreSQL Extensions in Azure](#implications-of-using-postgresql-extensions-in-azure)
+- [Single Server vs. Flexible Server in Azure PostgreSQL](#single-server-vs-flexible-server-in-azure-postgresql)
+- [Performance Tuning Options in Azure PostgreSQL](#performance-tuning-options-in-azure-postgresql)
+
+</details>
+
+
 ## Features
 - **High Availability**: Offers up to 99.99% SLA with built-in high availability.
 - **Automated Backups**: Daily backups with point-in-time restore capabilities.
