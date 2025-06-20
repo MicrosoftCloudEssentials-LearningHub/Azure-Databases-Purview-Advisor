@@ -29,7 +29,6 @@ Last updated: 2025-06-19
    - [Enabling Unity Data Governance](#enabling-unity-data-governance)
    - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
-   - [Example: DLP Policy for Customer PII](#example-dlp-policy-for-customer-pii)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
@@ -40,7 +39,7 @@ Last updated: 2025-06-19
 
 ## How to Integrate Azure SQL Database with Purview
 
-### 1. Registering the SQL Database in Purview
+### Registering the SQL Database in Purview
 
 - Go to the [Microsoft Purview Studio](https://web.purview.azure.com/).
 - Navigate to **Data Map** > **Register** > **Azure SQL Database**.
@@ -48,13 +47,13 @@ Last updated: 2025-06-19
 - Set up a scan rule set to define what metadata and classifications to extract.
 - Schedule regular scans to keep metadata and classifications up to date.
 
-### 2. Enabling Unity Data Governance
+### Enabling Unity Data Governance
 
 - Use **Unity Catalog** within Purview to manage access policies, data lineage, and data sharing.
 - Assign roles such as Data Owner, Data Steward, and Data Consumer to control access and responsibilities.
 - Track data movement and transformations for compliance and auditing.
 
-### 3. Data Classification and Labeling
+### Data Classification and Labeling
 
 - Apply built-in or custom classifiers to automatically detect and label sensitive data (e.g., PII, financial data).
 - Use labels to drive downstream policies such as Data Loss Prevention (DLP) and access controls.
@@ -63,20 +62,50 @@ Last updated: 2025-06-19
 
 > DLP projects in Purview help you identify, monitor, and protect sensitive data within your SQL databases.
 
-### Example: DLP Policy for Customer PII
+<details>
+<summary><b>E.g: DLP Policy for Customer Signup Data</b> (Click to expand)</summary>
 
-> Prevent unauthorized export of customer personally identifiable information (PII).
+> Secure sensitive information submitted during user registration flows.
 
 **Steps:**
-1. **Create a DLP Policy:**  
-   In Purview, define a policy targeting tables/columns with PII (e.g., email, SSN).
-2. **Define Detection Rules:**  
-   Use built-in or custom classifiers to identify PII fields.
+1. **Create a DLP Policy:** Apply to tables like `UserAccounts`, `RegistrationForms`, or `NewCustomers`.
+2. **Define Detection Rules:** Detect fields like name, email, contact number, and national IDs.
 3. **Set Actions:**  
-   - Alert data owners when PII is accessed or exported.
-   - Optionally, block export or require additional approval for sensitive data.
-4. **Monitor and Audit:**  
-   Use Purview’s monitoring dashboard to track policy violations and data access patterns.
+   - Redact sensitive fields for non-customer-service roles.  
+   - Block export of records with incomplete user verification.
+4. **Monitor and Audit:** Log weekly metrics on account access by department.
+
+</details>
+
+<details>
+<summary><b>E.g: DLP Policy for Geo-Sensitive Access</b> (Click to expand)</summary>
+
+> Restrict access to localized customer data based on geographic region (e.g., Costa Rica customers).
+
+**Steps:**
+1. **Create a DLP Policy:** Filter tables like `Orders`, `SupportRequests`, or `UserPreferences` with `country_code = 'CR'`.
+2. **Define Detection Rules:** Use country-based tagging and IP-based access logging.
+3. **Set Actions:**  
+   - Require additional authentication when data is accessed from non-local regions.  
+   - Alert regional data stewards for out-of-pattern queries.
+4. **Monitor and Audit:** Use Purview to trace anomalies in data flow and access trends by geography.
+
+</details>
+
+<details>
+<summary><b>E.g: DLP Policy for Product Feedback & Survey Responses</b> (Click to expand)</summary>
+
+> Safeguard subjective customer inputs that may contain unstructured PII.
+
+**Steps:**
+1. **Create a DLP Policy:** Apply to columns like `feedback_text`, `support_notes`, or `survey_responses`.
+2. **Define Detection Rules:** Use natural language classifiers to identify PII embedded in comments.
+3. **Set Actions:**  
+   - Mask responses by default and allow reveal only to specific analysts.  
+   - Flag and redact offensive or unfiltered content before storage.
+4. **Monitor and Audit:** Review flagged content for moderation effectiveness.
+
+</details>
 
 ## Cost Management and Budgeting
 
