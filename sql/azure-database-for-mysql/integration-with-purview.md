@@ -1,4 +1,4 @@
-## Integrating Azure Database for MySQL with Microsoft Purview
+# Integrating Azure Database for MySQL with Microsoft Purview
 
 Costa Rica
 
