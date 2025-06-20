@@ -12,6 +12,15 @@ Last updated: 2025-06-03
 
 > Azure SQL Database is a fully managed relational database service provided by Microsoft Azure. It is built on the latest stable version of the SQL Server Database Engine and offers a range of features that help developers and organizations build and manage applications with ease.
 
+<details>
+<summary>Table of Content</summary>
+
+- [Features](#features)
+- [Use Cases](#use-cases)
+- [Sample Code Snippet](#sample-code-snippet)
+
+</details>
+
 ## Features
 - **Managed Service**: Automates database management tasks such as backups, patching, and scaling.
 - **High Availability**: Built-in high availability with a 99.99% SLA.
