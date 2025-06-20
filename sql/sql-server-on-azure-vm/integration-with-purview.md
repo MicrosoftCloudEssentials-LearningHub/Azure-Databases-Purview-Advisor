@@ -29,7 +29,6 @@ Last updated: 2025-06-19
     - [Enabling Unity Data Governance](#enabling-unity-data-governance)
     - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
-    - [Example: DLP Policy for Customer PII](#example-dlp-policy-for-customer-pii)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
     - [Cost Components](#cost-components)
     - [Example Monthly Budget](#example-monthly-budget)
@@ -42,7 +41,7 @@ Last updated: 2025-06-19
 
 ## How to Integrate SQL Server on Azure VM with Purview
 
-### 1. Registering the SQL Server on Azure VM in Purview
+### Registering the SQL Server on Azure VM in Purview
 
 - Go to the [Microsoft Purview Studio](https://web.purview.azure.com/).
 - Navigate to **Data Map** > **Register** > **SQL Server on Azure VM**.
@@ -50,13 +49,13 @@ Last updated: 2025-06-19
 - Set up a scan rule set to define what metadata and classifications to extract.
 - Schedule regular scans to keep metadata and classifications up to date.
 
-### 2. Enabling Unity Data Governance
+### Enabling Unity Data Governance
 
 - Use **Unity Catalog** within Purview to manage access policies, data lineage, and data sharing.
 - Assign roles such as Data Owner, Data Steward, and Data Consumer to control access and responsibilities.
 - Track data movement and transformations for compliance and auditing.
 
-### 3. Data Classification and Labeling
+### Data Classification and Labeling
 
 - Apply built-in or custom classifiers to automatically detect and label sensitive data (e.g., PII, financial data).
 - Use labels to drive downstream policies such as Data Loss Prevention (DLP) and access controls.
@@ -65,20 +64,52 @@ Last updated: 2025-06-19
 
 > DLP projects in Purview help you identify, monitor, and protect sensitive data within your SQL Server databases hosted on Azure VMs.
 
-### Example: DLP Policy for Customer PII
+<details>
+<summary><b>E.g: DLP Policy for Cross-Region Access Control</b> (Click to expand)</summary>
 
-> Prevent unauthorized export of customer personally identifiable information (PII).
+> Control export of sensitive data from Azure-hosted SQL Server in Costa Rica to other regions.
 
 **Steps:**
-1. **Create a DLP Policy:**  
-   In Purview, define a policy targeting tables/columns with PII (e.g., email, SSN).
-2. **Define Detection Rules:**  
-   Use built-in or custom classifiers to identify PII fields.
+1. **Create a DLP Policy:** Target columns with geo-sensitive data (e.g., address, tax ID) in tables like `CustomerProfiles` or `LocalTaxRecords`.
+2. **Define Detection Rules:** Use built-in geography classifiers or custom location filters.
 3. **Set Actions:**  
-   - Alert data owners when PII is accessed or exported.
-   - Optionally, block export or require additional approval for sensitive data.
+   - Alert admins when data is queried from outside Costa Rica.  
+   - Require approval workflows for cross-region exports.
+4. **Monitor and Audit:** Track access origin using Purview’s dashboard with IP region mapping.
+
+</details>
+
+<details>
+<summary><b>E.g: DLP Policy for Admin Console Activity</b> (Click to expand)</summary>
+
+> Detect suspicious DLP policy changes or overrides made via elevated SQL Server roles.
+
+**Steps:**
+1. **Create a DLP Policy:** Monitor admin actions on high-risk tables or rows marked as classified.
+2. **Define Detection Rules:** Audit DDL/DML operations through SQL logs with extended audit policies.
+3. **Set Actions:**  
+   - Alert InfoSec team of admin overrides on DLP-protected data.  
+   - Flag changes to export rules or policy exceptions.
+4. **Monitor and Audit:** Enable logging across VM and database layers and correlate in Purview.
+
+</details>
+
+<details>
+<summary><b>E.g: DLP Policy for Shadow IT Discovery</b> (Click to expand)</summary>
+
+> Identify and block unauthorized data movement to unmanaged apps or storage targets.
+
+**Steps:**
+1. **Create a DLP Policy:** Focus on exports to unknown endpoints (e.g., personal OneDrive, rogue FTP servers).
+2. **Define Detection Rules:**  
+   Use endpoint traffic patterns and Purview integration with Microsoft Defender.
+3. **Set Actions:**  
+   - Block data exfiltration to non-whitelisted destinations.  
+   - Notify security team and disable user access temporarily.
 4. **Monitor and Audit:**  
-   Use Purview’s monitoring dashboard to track policy violations and data access patterns.
+   View flagged incidents and take remediation actions in Purview.
+
+</details>
 
 ## Cost Management and Budgeting
 
