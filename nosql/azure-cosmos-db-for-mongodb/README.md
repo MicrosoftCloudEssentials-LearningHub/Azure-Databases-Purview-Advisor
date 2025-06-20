@@ -10,6 +10,18 @@ Last updated: 2025-06-19
 
 > Azure Cosmos DB for MongoDB provides a globally distributed, multi-model database service that is compatible with MongoDB APIs, enabling seamless integration and scalability.
 
+<details>
+<summary>Table of Content</summary>
+
+- [Features](#features)
+- [Use Cases](#use-cases)
+- [Sample Code Snippet](#sample-code-snippet)
+- [Security Features](#security-features)
+- [Migration Strategies](#migration-strategies)
+- [Performance Tuning](#performance-tuning)
+
+</details>
+
 ## Features
 
 - **MongoDB Compatibility**: Supports MongoDB APIs for seamless integration.
