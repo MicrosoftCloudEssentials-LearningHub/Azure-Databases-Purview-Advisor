@@ -23,6 +23,19 @@ Last updated: 2025-06-03
 
 </details>
 
+<details>
+<summary>Table of Content</summary>
+
+- [Features](#features)
+- [Use Cases](#use-cases)
+- [Sample Code Snippet](#sample-code-snippet)
+- [Using Ledger Tables for Data Integrity in Financial Applications](#using-ledger-tables-for-data-integrity-in-financial-applications)
+- [Integrating SQL Server 2022 with Azure Synapse Analytics for Real-Time Insights](#integrating-sql-server-2022-with-azure-synapse-analytics-for-real-time-insights)
+- [Security Enhancements in SQL Server 2022 and Their Compliance Impact](#security-enhancements-in-sql-server-2022-and-their-compliance-impact)
+
+
+</details>
+
 ## Features
 - **Hybrid Capabilities**: Seamless integration with Azure services for hybrid cloud scenarios.
 - **Ledger Tables**: Built-in support for ledger tables to enhance data integrity and security.
