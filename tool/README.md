@@ -31,11 +31,9 @@ tool/
     └── styles.css
 ```
 
----
-
 ## Usage
 
-This repository contains both a static web app and a backend API.
+> This repository contains both a static web app and a backend API.
 
 - The static web app is deployed via GitHub Pages.
 - The backend (Flask API) is not deployed by default and must be deployed separately if you want to use it.
