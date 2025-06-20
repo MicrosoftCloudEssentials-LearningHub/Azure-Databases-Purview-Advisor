@@ -29,7 +29,6 @@ Last updated: 2025-06-19
    - [Enabling Unity Data Governance](#enabling-unity-data-governance)
    - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
-   - [Example: DLP Policy for Customer PII](#example-dlp-policy-for-customer-pii)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
@@ -40,7 +39,7 @@ Last updated: 2025-06-19
 
 ## How to Integrate Azure SQL Managed Instance with Purview
 
-### 1. Registering the SQL Managed Instance in Purview
+### Registering the SQL Managed Instance in Purview
 
 - Go to the [Microsoft Purview Studio](https://web.purview.azure.com/).
 - Navigate to **Data Map** > **Register** > **Azure SQL Managed Instance**.
@@ -48,13 +47,13 @@ Last updated: 2025-06-19
 - Set up a scan rule set to define what metadata and classifications to extract.
 - Schedule regular scans to keep metadata and classifications up to date.
 
-### 2. Enabling Unity Data Governance
+### Enabling Unity Data Governance
 
 - Use **Unity Catalog** within Purview to manage access policies, data lineage, and data sharing.
 - Assign roles such as Data Owner, Data Steward, and Data Consumer to control access and responsibilities.
 - Track data movement and transformations for compliance and auditing.
 
-### 3. Data Classification and Labeling
+### Data Classification and Labeling
 
 - Apply built-in or custom classifiers to automatically detect and label sensitive data (e.g., PII, financial data).
 - Use labels to drive downstream policies such as Data Loss Prevention (DLP) and access controls.
@@ -63,20 +62,50 @@ Last updated: 2025-06-19
 
 > DLP projects in Purview help you identify, monitor, and protect sensitive data within your SQL Managed Instances.
 
-### Example: DLP Policy for Customer PII
+<details>
+<summary><b>E.g: DLP Policy for Confidential B2B Contracts</b> (Click to expand)</summary>
 
-**Objective:** Prevent unauthorized export of customer personally identifiable information (PII).
+> Secure access to supplier agreements and B2B NDAs hosted in SQL Managed Instance.
 
 **Steps:**
-1. **Create a DLP Policy:**  
-   In Purview, define a policy targeting tables/columns with PII (e.g., email, SSN).
-2. **Define Detection Rules:**  
-   Use built-in or custom classifiers to identify PII fields.
+1. **Create a DLP Policy:** Focus on tables like `LegalDocuments`, `VendorContracts`, or `PartnerNDAs`.
+2. **Define Detection Rules:** Use keyword-based classifiers for contract terms, clause types, and party identifiers.
 3. **Set Actions:**  
-   - Alert data owners when PII is accessed or exported.
-   - Optionally, block export or require additional approval for sensitive data.
-4. **Monitor and Audit:**  
-   Use Purview’s monitoring dashboard to track policy violations and data access patterns.
+   - Require legal team approval for downloads.  
+   - Automatically redact sensitive fields such as termination clauses or pricing terms.
+4. **Monitor and Audit:** Use Purview logs to identify users repeatedly accessing high-risk agreements.
+
+</details>
+
+<details>
+<summary><b>E.g: DLP Policy for Multi-Tenant Data Isolation</b> (Click to expand)</summary>
+
+> Prevent leakage of tenant data in multi-customer environments running on a shared SQL Managed Instance.
+
+**Steps:**
+1. **Create a DLP Policy:** Classify tenant identifiers in tables like `CustomerData`, `BillingRecords`, or `AppUsage`.
+2. **Define Detection Rules:** Match against `tenant_id`, `org_id`, and region-specific markers.
+3. **Set Actions:**  
+   - Deny joins or exports that span data from multiple tenant IDs.  
+   - Enforce row-level security labels through Purview policies.
+4. **Monitor and Audit:** Generate alerts for cross-tenant queries and export attempts.
+
+</details>
+
+<details>
+<summary><b>E.g: DLP Policy for Business Continuity Reports</b> (Click to expand)</summary>
+
+> Protect internal disaster recovery plans and business impact assessments stored in SQL MI.
+
+**Steps:**
+1. **Create a DLP Policy:** Tag documentation tables like `DR_Playbooks`, `RecoveryPlans`, and `BCP_RiskAssessment`.
+2. **Define Detection Rules:** Detect sensitive recovery identifiers, backup architecture, and RTO/RPO values.
+3. **Set Actions:**  
+   - Mask recovery steps for roles outside of IT continuity planning.  
+   - Alert when data is exported to external drives or unmanaged Azure storage.
+4. **Monitor and Audit:** Review policy violations during disaster simulations or test drills.
+
+</details>
 
 ## Cost Management and Budgeting
 
