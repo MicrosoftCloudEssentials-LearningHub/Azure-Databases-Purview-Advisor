@@ -21,6 +21,18 @@ Last updated: 2025-06-03
 
 </details>
 
+<details>
+<summary>Table of Content</summary>
+  
+- [Features](#features)
+- [Use Cases](#use-cases)
+- [Sample Code Snippet](#sample-code-snippet)
+- [Implications of Using SQL Server on Azure VMs vs. PaaS Solutions](#implications-of-using-sql-server-on-azure-vms-vs-paas-solutions)
+- [Best Practices for Managing SQL Server on Azure VMs Backup & DR](#best-practices-for-managing-sql-server-on-azure-vms-backup--dr)
+- [Performance Tuning Techniques for SQL Server in a Virtualized Environment](#performance-tuning-techniques-for-sql-server-in-a-virtualized-environment)
+
+</details>
+
 ## Features
 
 - **Full Control**: Offers complete OS-level access and control over the SQL Server instance.
@@ -88,7 +100,6 @@ az vm create \
 - **VM Sizing**:
   - Choose VM SKUs (e.g., **Ebdsv5**, **M-series**) that match your memory and IOPS needs.
   - Monitor TempDB usage and scale accordingly.
-
 
 <div align="center">
   <h3 style="color: #4CAF50;">Total Visitors</h3>
