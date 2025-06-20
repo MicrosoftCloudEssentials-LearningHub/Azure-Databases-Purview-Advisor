@@ -106,8 +106,7 @@ Last updated: 2025-06-19
 3. **Set Actions:**  
    - Block data exfiltration to non-whitelisted destinations.  
    - Notify security team and disable user access temporarily.
-4. **Monitor and Audit:**  
-   View flagged incidents and take remediation actions in Purview.
+4. **Monitor and Audit:** View flagged incidents and take remediation actions in Purview.
 
 </details>
 
