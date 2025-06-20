@@ -15,7 +15,6 @@ Last updated: 2025-06-20
 
 - [Microsoft Purview Documentation](https://learn.microsoft.com/en-us/azure/purview/)
 - [Azure Cosmos DB for MongoDB Documentation](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/)
-- [Purview MongoDB Integration Guide](https://learn.microsoft.com/en-us/azure/purview/how-to-register-scan-mongodb)
 - [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
 
 </details>
