@@ -1,21 +1,23 @@
-document.getElementById('recommend-button').addEventListener('click', function() {
+document.getElementById('advisor-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const dataVolume = document.getElementById('data-volume').value;
     const dataType = document.getElementById('data-type').value;
+    const latency = document.getElementById('latency').value;
     const scalability = document.getElementById('scalability').value;
-    const purviewIntegration = document.getElementById('purview-integration').value;
+    const consistency = document.getElementById('consistency').value;
+    const integrationNeeds = document.getElementById('integration-needs').value;
+    const security = document.getElementById('security').value;
+    const budget = document.getElementById('budget').value;
+    const deploymentModel = document.getElementById('deployment-model').value;
+    const useCase = document.getElementById('use-case').value;
 
-    let recommendation = '';
+    const response = await fetch('http://your-backend-url/recommend', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data_volume: dataVolume, data_type: dataType, latency, scalability, consistency, integration_needs: integrationNeeds, security, budget, deployment_model: deploymentModel, use_case: useCase })
+    });
 
-    if (dataType === 'sql' && scalability === 'high' && purviewIntegration === 'yes') {
-        recommendation = 'Azure SQL Database';
-    } else if (dataType === 'nosql' && scalability === 'high' && purviewIntegration === 'yes') {
-        recommendation = 'Azure Cosmos DB';
-    } else if (dataType === 'sql' && scalability === 'medium') {
-        recommendation = 'Azure SQL Managed Instance';
-    } else if (dataType === 'nosql' && scalability === 'medium') {
-        recommendation = 'Azure Cache for Redis';
-    } else {
-        recommendation = 'Azure Database for PostgreSQL';
-    }
-
-    document.getElementById('recommendation-result').textContent = recommendation;
+    const result = await response.json();
+    document.getElementById('recommendation').innerText = `Recommended Database: ${result.recommendation}`;
 });

@@ -11,33 +11,56 @@
         <h1>Azure Database Selector</h1>
     </header>
     <main>
-        <form id="database-selector-form">
-            <label for="data-type">Type of Data:</label>
-            <select id="data-type" name="data-type">
-                <option value="sql">SQL</option>
-                <option value="nosql">NoSQL</option>
+        <form id="advisor-form">
+            <label for="data-volume">Data Volume (GB):</label>
+            <input type="number" id="data-volume" name="data-volume" required>
+
+            <label for="data-type">Data Type:</label>
+            <select id="data-type" name="data-type" required>
+                <option value="structured">Structured</option>
+                <option value="semi-structured">Semi-structured</option>
+                <option value="unstructured">Unstructured</option>
             </select>
+
+            <label for="latency">Latency Requirements:</label>
+            <input type="text" id="latency" name="latency" required>
 
             <label for="scalability">Scalability Needs:</label>
-            <select id="scalability" name="scalability">
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
+            <input type="text" id="scalability" name="scalability" required>
+
+            <label for="consistency">Consistency Model:</label>
+            <select id="consistency" name="consistency" required>
+                <option value="strong">Strong</option>
+                <option value="eventual">Eventual</option>
             </select>
 
-            <label for="purview-integration">Integration with Purview:</label>
-            <select id="purview-integration" name="purview-integration">
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
+            <label for="integration-needs">Integration Needs:</label>
+            <input type="text" id="integration-needs" name="integration-needs">
+
+            <label for="security">Security Requirements:</label>
+            <input type="text" id="security" name="security">
+
+            <label for="budget">Budget (USD/month):</label>
+            <input type="number" id="budget" name="budget" required>
+
+            <label for="deployment-model">Deployment Model:</label>
+            <select id="deployment-model" name="deployment-model" required>
+                <option value="PaaS">Fully Managed (PaaS)</option>
+                <option value="IaaS">Self-hosted (IaaS)</option>
+                <option value="Serverless">Serverless</option>
             </select>
 
-            <button type="button" id="recommend-button">Recommend Database</button>
+            <label for="use-case">Use Case:</label>
+            <select id="use-case" name="use-case" required>
+                <option value="OLTP">Transactional Processing (OLTP)</option>
+                <option value="OLAP">Analytical Processing (OLAP)</option>
+                <option value="AI/ML">AI/ML Workloads</option>
+            </select>
+
+            <button type="submit">Get Recommendation</button>
         </form>
 
-        <section id="recommendation">
-            <h2>Recommended Database</h2>
-            <p id="recommendation-result">Select your preferences to see recommendations.</p>
-        </section>
+        <p id="recommendation"></p>
     </main>
     <script src="script.js"></script>
 </body>
