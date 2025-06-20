@@ -146,16 +146,11 @@ Last updated: 2025-06-19
 1. **Register the Oracle Database**:
    - Navigate to the Microsoft Purview portal.
    - Register your Oracle Database on Azure as a data source.
-
 2. **Scan the Data Source**:
    - Configure scanning rules to classify and catalog the data.
    - Schedule periodic scans to keep the catalog updated.
-
-3. **Manage Data Lineage**:
-   - Use Purview to visualize data lineage across your Oracle databases.
-
-4. **Set Up Access Policies**:
-   - Define access policies for data governance using Purview.
+3. **Manage Data Lineage**: Use Purview to visualize data lineage across your Oracle databases.
+4. **Set Up Access Policies**: Define access policies for data governance using Purview.
 
 ### Benefits
 
