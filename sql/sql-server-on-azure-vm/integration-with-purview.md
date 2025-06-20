@@ -30,8 +30,6 @@ Last updated: 2025-06-19
     - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
-    - [Cost Components](#cost-components)
-    - [Example Monthly Budget](#example-monthly-budget)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
     - [Steps to Integrate](#steps-to-integrate)
@@ -114,7 +112,10 @@ Last updated: 2025-06-19
 
 > Integrating with Purview introduces additional costs for scanning, classification, and governance. Below is a breakdown and example budget.
 
-### Cost Components
+> [!NOTE]
+> - Costs may vary based on region, scan frequency, and data volume.
+> - Use [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) for precise estimates.
+> - Set up budgets and alerts in [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/) to avoid overruns.
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
@@ -125,19 +126,6 @@ Last updated: 2025-06-19
 
 > [!TIP]
 > Click here to understand more about [Azure Purview Cost Estimation](../../Purview/Cost-Estimation.md)
-
-### Example Monthly Budget
-
-| Resource                        | Estimated Monthly Cost |
-|----------------------------------|-----------------------|
-| Purview (2 vCores, light usage)  | $300                  |
-| Data Scanning (100GB/month)      | $20                   |
-| **Total**                        | **$320**              |
-
-> [!NOTE]
-> - Costs may vary based on region, scan frequency, and data volume.
-> - Use [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) for precise estimates.
-> - Set up budgets and alerts in [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/) to avoid overruns.
 
 ## Best Practices
 
@@ -159,16 +147,11 @@ Last updated: 2025-06-19
 1. **Register the SQL Server Database**:
    - Navigate to the Microsoft Purview portal.
    - Register your SQL Server on Azure VM as a data source.
-
 2. **Scan the Data Source**:
    - Configure scanning rules to classify and catalog the data.
    - Schedule periodic scans to keep the catalog updated.
-
-3. **Manage Data Lineage**:
-   - Use Purview to visualize data lineage across your SQL Server databases.
-
-4. **Set Up Access Policies**:
-   - Define access policies for data governance using Purview.
+3. **Manage Data Lineage**: Use Purview to visualize data lineage across your SQL Server databases.
+4. **Set Up Access Policies**: Define access policies for data governance using Purview.
 
 ### Benefits
 
