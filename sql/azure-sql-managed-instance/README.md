@@ -24,6 +24,18 @@ Last updated: 2025-06-03
 
 </details>
 
+<details>
+<summary>Table of Content</summary>
+
+- [Benefits](#benefits)
+- [Use Cases](#use-cases)
+- [Sample Code Snippet](#sample-code-snippet)
+- [Differences Between Azure SQL Managed Instance and Azure SQL Database](#differences-between-azure-sql-managed-instance-and-azure-sql-database)
+- [Implications of Using SQL Server Agent in a Managed Instance](#implications-of-using-sql-server-agent-in-a-managed-instance)
+- [Performance Considerations When Migrating Large Databases to Azure SQL Managed Instance](#performance-considerations-when-migrating-large-databases-to-azure-sql-managed-instance)
+
+</details>
+
 ## Benefits
 
 - **Simplified Migration**: Allows for easy migration from on-premises SQL Server environments with minimal changes.
