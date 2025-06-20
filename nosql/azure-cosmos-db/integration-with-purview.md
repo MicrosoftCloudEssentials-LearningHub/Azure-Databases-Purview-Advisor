@@ -15,7 +15,6 @@ Last updated: 2025-06-19
 
 - [Microsoft Purview Documentation](https://learn.microsoft.com/en-us/azure/purview/)
 - [Azure Cosmos DB Documentation](https://learn.microsoft.com/en-us/azure/cosmos-db/)
-- [Purview Data Loss Prevention](https://learn.microsoft.com/en-us/azure/purview/concept-data-loss-prevention)
 - [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
 
 </details>
