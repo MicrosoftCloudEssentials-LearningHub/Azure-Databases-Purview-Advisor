@@ -22,7 +22,6 @@ Last updated: 2025-06-19
 
 </details>
 
-
 ## Features
 
 - **Managed Service**: Reduces operational overhead with automated patching and scaling.
