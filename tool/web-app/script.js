@@ -128,6 +128,20 @@ const summaryIcons = {
     'query-complexity': '🧩',
     'data-retention': '⏳'
 };
+const docLinks = {
+    'data-volume': 'https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning#scalability-targets',
+    'data-type': 'https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview',
+    'latency': 'https://learn.microsoft.com/en-us/azure/azure-sql/database/performance-guidance-overview',
+    'scalability': 'https://learn.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally',
+    'consistency': 'https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels',
+    'integration-needs': 'https://learn.microsoft.com/en-us/azure/data-factory/introduction',
+    'security': 'https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview',
+    'budget': 'https://azure.microsoft.com/en-us/pricing/calculator/',
+    'use-case': 'https://learn.microsoft.com/en-us/azure/azure-sql/database/oltp-olap-overview',
+    'backup-recovery': 'https://learn.microsoft.com/en-us/azure/backup/backup-overview',
+    'query-complexity': 'https://learn.microsoft.com/en-us/azure/azure-sql/database/query-performance-insight-use',
+    'data-retention': 'https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-data-retention'
+};
 function updateSummary() {
     const ul = document.getElementById('summary-list');
     ul.innerHTML = '';
@@ -135,9 +149,10 @@ function updateSummary() {
         const el = document.getElementById(id);
         if (el) {
             const label = document.querySelector(`label[for="${id}"]`);
-            const li = document.createElement('li');
             const icon = summaryIcons[id] || '';
-            li.innerHTML = `<span class="summary-icon">${icon}</span><span class="summary-label">${label ? label.childNodes[0].textContent.trim() : id}:</span> <span>${el.value}</span>`;
+            const doc = docLinks[id] ? `<a href="${docLinks[id]}" target="_blank" class="doc-link" title="Microsoft documentation" style="margin-left:0.4em;font-size:1.1em;">🔗</a>` : '';
+            const li = document.createElement('li');
+            li.innerHTML = `<span class="summary-icon">${icon}</span><span class="summary-label">${label ? label.childNodes[0].textContent.trim() : id}:</span> <span>${el.value}</span>${doc}`;
             ul.appendChild(li);
         }
     });
@@ -297,10 +312,47 @@ document.getElementById('advisor-form').addEventListener('submit', async (event)
 function showJustification(justification, confidence) {
     const justDiv = document.getElementById('recommendation-justification');
     const confDiv = document.getElementById('confidence-score');
-    document.getElementById('justification-text').textContent = justification;
+    // Extended technical definition and disclaimer
+    const extendedDef = `<div style="margin-bottom:0.7em;">
+        <strong>About this Azure Service:</strong><br>
+        <span id="extended-service-def"></span>
+    </div>
+    <div style="font-size:0.97em;color:#b71c1c;margin-bottom:0.5em;">
+        <strong>Disclaimer:</strong> This tool is an advisor only. For official guidance, support, or more detailed information, please refer to <a href='https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME' target='_blank' rel='noopener'>Microsoft Sales and Support</a> or the official Microsoft documentation.
+    </div>`;
+    document.getElementById('justification-text').innerHTML = extendedDef + justification;
     justDiv.style.display = 'block';
     document.getElementById('confidence-value').textContent = confidence + '%';
     confDiv.style.display = 'block';
+    // Try to show a broad technical definition for the recommended service
+    const recDiv = document.getElementById('recommendation-result');
+    let rec = '';
+    if (recDiv) {
+        const match = recDiv.innerHTML.match(/<strong>([\w\s\-\/]+)<\/strong>/i);
+        if (match) {
+            rec = match[1].trim();
+        }
+    }
+    const defs = {
+        'Azure SQL Database': `Azure SQL Database is a fully managed platform as a service (PaaS) database engine that handles most of the database management functions such as upgrading, patching, backups, and monitoring without user involvement. It provides built-in high availability, scalability, and security. Learn more at <a href='https://learn.microsoft.com/en-us/azure/azure-sql/database/' target='_blank'>Azure SQL Database documentation</a>.`,
+        'Azure Cosmos DB': `Azure Cosmos DB is a globally distributed, multi-model database service designed for mission-critical applications. It offers turnkey global distribution, elastic scaling of throughput and storage, multi-model support (including document, key-value, graph, and column-family), and guarantees single-digit millisecond latencies at the 99th percentile. Learn more at <a href='https://learn.microsoft.com/en-us/azure/cosmos-db/introduction' target='_blank'>Azure Cosmos DB documentation</a>.`,
+        'Azure SQL Managed Instance': `Azure SQL Managed Instance is a fully managed SQL Server database engine instance hosted in Azure cloud. It provides near 100% compatibility with the latest SQL Server (Enterprise Edition) database engine, making it easy to migrate SQL Server workloads to Azure. Learn more at <a href='https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-overview' target='_blank'>Azure SQL Managed Instance documentation</a>.`,
+        'Azure Database for PostgreSQL': `Azure Database for PostgreSQL is a managed database service for app development and deployment that provides built-in high availability, automated backups, scaling, and security. It supports community PostgreSQL and offers flexible server and hyperscale (Citus) deployment options. Learn more at <a href='https://learn.microsoft.com/en-us/azure/postgresql/' target='_blank'>Azure Database for PostgreSQL documentation</a>.`,
+        'Azure Database for MySQL': `Azure Database for MySQL is a managed database service for app development and deployment with built-in high availability, security, and scaling. It supports community MySQL and offers flexible server deployment. Learn more at <a href='https://learn.microsoft.com/en-us/azure/mysql/' target='_blank'>Azure Database for MySQL documentation</a>.`,
+        'Azure Synapse Analytics': `Azure Synapse Analytics is an integrated analytics service that accelerates time to insight across data warehouses and big data systems. It brings together big data and data warehousing into a single service for end-to-end analytics. Learn more at <a href='https://learn.microsoft.com/en-us/azure/synapse-analytics/' target='_blank'>Azure Synapse Analytics documentation</a>.`,
+        'Azure Databricks': `Azure Databricks is an Apache Spark-based analytics platform optimized for the Microsoft Azure cloud. It provides collaborative notebooks, integrated workflows, and enterprise-grade security for big data analytics and AI. Learn more at <a href='https://learn.microsoft.com/en-us/azure/databricks/' target='_blank'>Azure Databricks documentation</a>.`,
+        'Azure Cache for Redis': `Azure Cache for Redis is a fully managed, in-memory cache that enables high-performance and scalable architectures. It is based on the popular open-source Redis cache and provides sub-millisecond data access to power fast, scalable applications. Learn more at <a href='https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/' target='_blank'>Azure Cache for Redis documentation</a>.`,
+        'SQL Server on Azure Virtual Machines': `SQL Server on Azure Virtual Machines enables you to use full versions of SQL Server in the cloud without having to manage any on-premises hardware. It provides full control over the SQL Server instance and operating system. Learn more at <a href='https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-overview' target='_blank'>SQL Server on Azure VM documentation</a>.`,
+        'MongoDB Atlas on Azure (SaaS)': `MongoDB Atlas on Azure is a fully managed MongoDB service that automates deployment, scaling, and management of MongoDB clusters on Azure. Learn more at <a href='https://www.mongodb.com/atlas/azure' target='_blank'>MongoDB Atlas on Azure documentation</a>.`,
+        'Oracle Database on Azure (IaaS)': `Oracle Database on Azure enables you to run Oracle Database workloads on Azure infrastructure, providing high availability, security, and integration with Azure services. Learn more at <a href='https://learn.microsoft.com/en-us/azure/architecture/example-scenario/oracle/oracle-db-migration-azure/' target='_blank'>Oracle Database on Azure documentation</a>.`,
+        'Azure Managed Instance for Apache Cassandra': `Azure Managed Instance for Apache Cassandra is a managed service that provides scalability and high availability for Cassandra workloads, with automated patching, scaling, and hybrid deployment support. Learn more at <a href='https://learn.microsoft.com/en-us/azure/managed-instance-apache-cassandra/' target='_blank'>Azure Managed Instance for Apache Cassandra documentation</a>.`,
+        'Azure Cosmos DB for MongoDB': `Azure Cosmos DB for MongoDB is a fully managed, scalable, and highly available database service that supports MongoDB workloads with global distribution and low-latency access. Learn more at <a href='https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/mongodb-introduction' target='_blank'>Azure Cosmos DB for MongoDB documentation</a>.`
+    };
+    if (rec && defs[rec]) {
+        document.getElementById('extended-service-def').innerHTML = defs[rec];
+    } else {
+        document.getElementById('extended-service-def').innerHTML = 'For more information about this Azure service, please refer to the <a href="https://azure.microsoft.com/en-us/products/category/databases/" target="_blank">official Azure documentation</a>.';
+    }
 }
 
 // --- Reset Button Logic ---

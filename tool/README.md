@@ -14,10 +14,19 @@ Last updated: 2025-06-20
 
 <details>
 <summary><b>List of References</b> (Click to expand)</summary>
-  
-- [Azure Databases Overview](https://azure.microsoft.com/en-us/products/category/databases/?msockid=38ec3806873362243e122ce086486339)
-- [Azure Database Architecture Guide](https://learn.microsoft.com/en-us/azure/architecture/databases/)
-- [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
+
+- [Azure Storage Scalability Targets](https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning#scalability-targets)
+- [Types of Data in Azure](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+- [Performance best practices for Azure SQL Database and Azure SQL Managed Instance](https://learn.microsoft.com/en-us/azure/azure-sql/database/performance-guidance-overview)
+- [Global Distribution with Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally)
+- [Consistency Levels in Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels)
+- [Introduction to Azure Data Factory](https://learn.microsoft.com/en-us/azure/data-factory/introduction)
+- [Security overview for Azure SQL Database and Azure SQL Managed Instance](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview)
+- [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
+- [OLTP and OLAP in Azure SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/oltp-olap-overview)
+- [Azure Backup and Disaster Recovery](https://learn.microsoft.com/en-us/azure/backup/backup-overview)
+- [Query Performance Insight](https://learn.microsoft.com/en-us/azure/azure-sql/database/query-performance-insight-use)
+- [Data retention and deletion in Microsoft Azure](https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-data-retention)
 
 </details>
 
@@ -101,6 +110,10 @@ The tool now includes the following questions to refine recommendations:
   - Options: `Simple`, `Moderate`, `Complex`.
 - **Data Retention Policy**: Retention period for data.
   - Options: `Short-term`, `Medium-term`, `Long-term`.
+
+## Advanced Settings
+
+If the "Advanced Settings" button is not working, please refer to [Advanced Configuration for Azure Databases](https://learn.microsoft.com/en-us/azure/azure-sql/database/advanced-configuration) for more information.
 
 ## Example Recommendation Flow
 
