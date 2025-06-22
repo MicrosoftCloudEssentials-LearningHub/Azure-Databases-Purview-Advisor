@@ -11,86 +11,99 @@
         <h1>Azure Database Selector</h1>
     </header>
     <main>
-        <form id="advisor-form">
+        <form id="advisor-form" aria-labelledby="form-title">
+            <h2 id="form-title">Select Your Database Preferences</h2>
             <label for="data-volume">Data Volume:</label>
-            <select id="data-volume" name="data-volume" required title="Select the expected size of your data.">
+            <select id="data-volume" name="data-volume" required title="Select the expected size of your data." aria-describedby="data-volume-desc">
                 <option value="<10GB">Less than 10GB</option>
                 <option value="10GB-1TB">10GB to 1TB</option>
                 <option value=">1TB">More than 1TB</option>
             </select>
+            <span id="data-volume-desc">Choose the size of your data storage needs. For example, less than 10GB is suitable for small applications like blogs, while more than 1TB is ideal for enterprise systems.</span>
 
             <label for="data-type">Data Type:</label>
-            <select id="data-type" name="data-type" required title="Choose the type of data you will store.">
+            <select id="data-type" name="data-type" required title="Choose the type of data you will store." aria-describedby="data-type-desc">
                 <option value="structured">Structured (e.g., tables)</option>
                 <option value="semi-structured">Semi-structured (e.g., JSON, XML)</option>
                 <option value="unstructured">Unstructured (e.g., images, videos)</option>
             </select>
+            <span id="data-type-desc">Select the format of the data you will be storing. For instance, structured data is used for relational databases, while unstructured data is common for media files.</span>
 
             <label for="latency">Latency Requirements:</label>
-            <select id="latency" name="latency" required title="Select the maximum acceptable delay for database operations.">
+            <select id="latency" name="latency" required title="Select the maximum acceptable delay for database operations." aria-describedby="latency-desc">
                 <option value="<10ms">Less than 10ms</option>
                 <option value="10-100ms">10ms to 100ms</option>
                 <option value=">100ms">More than 100ms</option>
             </select>
+            <span id="latency-desc">Indicate how quickly you need the database to respond. For example, less than 10ms is critical for real-time applications like gaming.</span>
 
             <label for="scalability">Scalability Needs:</label>
-            <select id="scalability" name="scalability" required title="Choose whether the database needs to scale globally or locally.">
+            <select id="scalability" name="scalability" required title="Choose whether the database needs to scale globally or locally." aria-describedby="scalability-desc">
                 <option value="global">Global</option>
                 <option value="local">Local</option>
             </select>
+            <span id="scalability-desc">Specify if the database should support global or local scaling. For instance, global scaling is essential for multinational companies.</span>
 
             <label for="consistency">Consistency Model:</label>
-            <select id="consistency" name="consistency" required title="Select the consistency model for your database.">
+            <select id="consistency" name="consistency" required title="Select the consistency model for your database." aria-describedby="consistency-desc">
                 <option value="strong">Strong</option>
                 <option value="eventual">Eventual</option>
             </select>
+            <span id="consistency-desc">Choose the consistency model that fits your application's needs. Strong consistency ensures immediate updates, while eventual consistency is suitable for distributed systems.</span>
 
             <label for="integration-needs">Integration Needs:</label>
-            <select id="integration-needs" name="integration-needs" title="Specify if the database needs to integrate with other Azure services.">
+            <select id="integration-needs" name="integration-needs" title="Specify if the database needs to integrate with other Azure services." aria-describedby="integration-needs-desc">
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
+            <span id="integration-needs-desc">Indicate if you require integration with other services. For example, integration is necessary for analytics pipelines.</span>
 
             <label for="security">Security Requirements:</label>
-            <select id="security" name="security" title="Select the security features required for your database.">
+            <select id="security" name="security" title="Select the security features required for your database." aria-describedby="security-desc">
                 <option value="encryption">Encryption</option>
                 <option value="rbac">Role-based Access Control</option>
                 <option value="compliance">Compliance</option>
             </select>
+            <span id="security-desc">Select the security measures that are necessary for your data. Encryption is ideal for sensitive data, while compliance is crucial for regulated industries.</span>
 
             <label for="budget">Budget:</label>
-            <select id="budget" name="budget" required title="Choose your monthly budget for database services.">
+            <select id="budget" name="budget" required title="Choose your monthly budget for database services." aria-describedby="budget-desc">
                 <option value="<100 USD">Less than 100 USD</option>
                 <option value="100-500 USD">100 to 500 USD</option>
                 <option value=">500 USD">More than 500 USD</option>
             </select>
+            <span id="budget-desc">Specify your budget range for database solutions. For example, less than 100 USD is suitable for startups, while more than 500 USD is common for large enterprises.</span>
 
             <label for="use-case">Use Case:</label>
-            <select id="use-case" name="use-case" required title="Select the primary use case for your database.">
+            <select id="use-case" name="use-case" required title="Select the primary use case for your database." aria-describedby="use-case-desc">
                 <option value="OLTP">Transactional Processing (OLTP)</option>
                 <option value="OLAP">Analytical Processing (OLAP)</option>
                 <option value="AI/ML">AI/ML Workloads</option>
             </select>
+            <span id="use-case-desc">Choose the main purpose of the database you are selecting. For instance, OLTP is used for transactional systems, while OLAP is for analytics.</span>
 
             <label for="backup-recovery">Backup and Disaster Recovery:</label>
-            <select id="backup-recovery" name="backup-recovery" title="Specify if automated backups and disaster recovery are required.">
+            <select id="backup-recovery" name="backup-recovery" title="Specify if automated backups and disaster recovery are required." aria-describedby="backup-recovery-desc">
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
+            <span id="backup-recovery-desc">Indicate if you need automated backup and recovery options. For example, disaster recovery is essential for mission-critical systems.</span>
 
             <label for="query-complexity">Query Complexity:</label>
-            <select id="query-complexity" name="query-complexity" title="Select the expected complexity of database queries.">
+            <select id="query-complexity" name="query-complexity" title="Select the expected complexity of database queries." aria-describedby="query-complexity-desc">
                 <option value="simple">Simple (e.g., basic CRUD operations)</option>
                 <option value="moderate">Moderate (e.g., joins, aggregations)</option>
                 <option value="complex">Complex (e.g., advanced analytics, AI/ML queries)</option>
             </select>
+            <span id="query-complexity-desc">Select the complexity level of the queries you will perform. For instance, simple queries are used for CRUD operations, while complex queries are needed for AI/ML workloads.</span>
 
             <label for="data-retention">Data Retention Policy:</label>
-            <select id="data-retention" name="data-retention" title="Choose the expected retention period for your data.">
+            <select id="data-retention" name="data-retention" title="Choose the expected retention period for your data." aria-describedby="data-retention-desc">
                 <option value="short-term">Short-term (e.g., days or weeks)</option>
                 <option value="medium-term">Medium-term (e.g., months)</option>
                 <option value="long-term">Long-term (e.g., years)</option>
             </select>
+            <span id="data-retention-desc">Specify how long you need to retain your data. For example, short-term retention is suitable for temporary logs, while long-term retention is needed for compliance data.</span>
 
             <button type="submit">Get Recommendation</button>
         </form>
