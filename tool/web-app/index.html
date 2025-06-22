@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>Azure Database Selector</h1>
-        <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+        <button id="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode" tabindex="0">🌙</button>
     </header>
     <main class="two-panel-layout">
         <section class="left-panel">
@@ -111,35 +111,58 @@
                     <option value="no">No</option>
                 </select>
 
-                <label for="query-complexity">Query Complexity:
-                    <span class="info-icon" tabindex="0" data-tooltip="Select the complexity level of the queries you will perform. For instance, simple queries are used for CRUD operations, while complex queries are needed for AI/ML workloads.">ℹ️</span>
-                </label>
-                <select id="query-complexity" name="query-complexity">
-                    <option value="simple">Simple (e.g., basic CRUD operations)</option>
-                    <option value="moderate">Moderate (e.g., joins, aggregations)</option>
-                    <option value="complex">Complex (e.g., advanced analytics, AI/ML queries)</option>
-                </select>
+                <button id="toggle-advanced" aria-expanded="false" type="button">Show Advanced Settings</button>
+                <div id="advanced-settings" style="display:none;">
+                    <label for="query-complexity">Query Complexity:
+                        <button class="tooltip-icon" aria-label="More info" data-tooltip="Select the complexity level of the queries you will perform. For instance, simple queries are used for CRUD operations, while complex queries are needed for AI/ML workloads.">ℹ️</button>
+                    </label>
+                    <select id="query-complexity" name="query-complexity">
+                        <option value="simple">Simple (CRUD, Key-Value)</option>
+                        <option value="moderate">Moderate (Joins, Aggregations)</option>
+                        <option value="complex">Complex (AI/ML, Graph, Analytics)</option>
+                    </select>
 
-                <label for="data-retention">Data Retention Policy:
-                    <span class="info-icon" tabindex="0" data-tooltip="Specify how long you need to retain your data. For example, short-term retention is suitable for temporary logs, while long-term retention is needed for compliance data.">ℹ️</span>
-                </label>
-                <select id="data-retention" name="data-retention">
-                    <option value="short-term">Short-term (e.g., days or weeks)</option>
-                    <option value="medium-term">Medium-term (e.g., months)</option>
-                    <option value="long-term">Long-term (e.g., years)</option>
-                </select>
+                    <label for="data-retention">Data Retention Policy:
+                        <button class="tooltip-icon" aria-label="More info" data-tooltip="Specify how long you need to retain your data. For example, short-term retention is suitable for temporary logs, while long-term retention is needed for compliance data.">ℹ️</button>
+                    </label>
+                    <select id="data-retention" name="data-retention">
+                        <option value="short-term">Short-term (logs, cache)</option>
+                        <option value="medium-term">Medium-term (months, analytics)</option>
+                        <option value="long-term">Long-term (compliance, archive)</option>
+                    </select>
+                </div>
                 <button type="submit">Get Recommendation</button>
+                <button type="reset" id="reset-form">Reset Form</button>
             </form>
         </section>
         <section class="right-panel">
-            <div id="live-summary" class="summary-card">
+            <div id="live-summary" class="summary-card" aria-live="polite">
                 <h3>Live Summary</h3>
                 <ul id="summary-list"></ul>
             </div>
             <div id="recommendation-panel">
                 <div id="loading-spinner" style="display:none;">Loading...</div>
-                <div id="recommendation-result"></div>
+                <div id="recommendation-result" aria-live="polite"></div>
+                <div id="confidence-score" style="display:none;">
+                    <strong>Match Confidence:</strong> <span id="confidence-value">--</span>
+                </div>
+                <div id="recommendation-justification" class="justification-card" style="display:none;">
+                    <h4>Why this recommendation?</h4>
+                    <p id="justification-text"></p>
+                </div>
+                <div id="comparison-table" style="display:none;">
+                    <h4>Compare Options</h4>
+                    <!-- Table will be generated dynamically -->
+                </div>
                 <button id="export-btn" style="display:none;">Export/Share</button>
+                <div id="feedback-section">
+                    <label for="feedback">Was this recommendation helpful?</label>
+                    <select id="feedback" name="feedback">
+                        <option value="">-- Select --</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
             </div>
         </section>
     </main>

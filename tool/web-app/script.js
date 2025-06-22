@@ -58,10 +58,21 @@ document.querySelectorAll('.info-icon').forEach(icon => {
 
 // --- Theme toggle logic ---
 const themeToggle = document.getElementById('theme-toggle');
+function updateThemeToggleButton() {
+    const isDark = document.body.classList.contains('dark-mode');
+    if (isDark) {
+        themeToggle.innerHTML = '☀️ Light Mode';
+        themeToggle.setAttribute('aria-label', 'Switch to light mode');
+        themeToggle.setAttribute('title', 'Switch to light mode');
+    } else {
+        themeToggle.innerHTML = '🌙 Dark Mode';
+        themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+        themeToggle.setAttribute('title', 'Switch to dark mode');
+    }
+}
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    const isDark = document.body.classList.contains('dark-mode');
-    themeToggle.textContent = isDark ? '☀️' : '🌙';
+    updateThemeToggleButton();
     // Add a note indicating which mode is being switched to
     let note = document.getElementById('theme-note');
     if (!note) {
@@ -70,8 +81,11 @@ themeToggle.addEventListener('click', () => {
         note.style.marginTop = '8px';
         themeToggle.parentNode.appendChild(note);
     }
-    note.textContent = isDark ? 'Switched to dark mode. Click to change to light mode.' : 'Switched to light mode. Click to change to dark mode.';
+    note.textContent = document.body.classList.contains('dark-mode')
+        ? 'Switched to dark mode. Click to change to light mode.'
+        : 'Switched to light mode. Click to change to dark mode.';
 });
+updateThemeToggleButton();
 
 // --- Preset use case autofill ---
 const presetMap = {
@@ -100,6 +114,20 @@ document.getElementById('preset-usecase').addEventListener('change', function ()
 const formFields = [
     'data-volume','data-type','latency','scalability','consistency','integration-needs','security','budget','use-case','backup-recovery','query-complexity','data-retention'
 ];
+const summaryIcons = {
+    'data-volume': '💾',
+    'data-type': '📦',
+    'latency': '⚡',
+    'scalability': '🌍',
+    'consistency': '🔗',
+    'integration-needs': '🔌',
+    'security': '🔒',
+    'budget': '💸',
+    'use-case': '🗄️',
+    'backup-recovery': '🛡️',
+    'query-complexity': '🧩',
+    'data-retention': '⏳'
+};
 function updateSummary() {
     const ul = document.getElementById('summary-list');
     ul.innerHTML = '';
@@ -108,7 +136,8 @@ function updateSummary() {
         if (el) {
             const label = document.querySelector(`label[for="${id}"]`);
             const li = document.createElement('li');
-            li.textContent = `${label ? label.childNodes[0].textContent.trim() : id}: ${el.value}`;
+            const icon = summaryIcons[id] || '';
+            li.innerHTML = `<span class="summary-icon">${icon}</span><span class="summary-label">${label ? label.childNodes[0].textContent.trim() : id}:</span> <span>${el.value}</span>`;
             ul.appendChild(li);
         }
     });
@@ -256,6 +285,7 @@ document.getElementById('advisor-form').addEventListener('submit', async (event)
             </div>
         `;
         document.getElementById('export-btn').style.display = 'inline-block';
+        showJustification(justification, confidence);
     } catch (error) {
         document.getElementById('recommendation-result').innerHTML = `<span class="error">Error: ${error.message}</span>`;
     } finally {
@@ -263,13 +293,67 @@ document.getElementById('advisor-form').addEventListener('submit', async (event)
     }
 });
 
-// --- Export/share functionality ---
-document.getElementById('export-btn').addEventListener('click', function () {
-    const summary = document.getElementById('live-summary').innerText;
-    const recommendation = document.getElementById('recommendation-result').innerText;
-    const blob = new Blob([summary + '\n\n' + recommendation], { type: 'text/plain' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'azure-db-recommendation.txt';
-    link.click();
+// --- Show Justification and Confidence Score ---
+function showJustification(justification, confidence) {
+    const justDiv = document.getElementById('recommendation-justification');
+    const confDiv = document.getElementById('confidence-score');
+    document.getElementById('justification-text').textContent = justification;
+    justDiv.style.display = 'block';
+    document.getElementById('confidence-value').textContent = confidence + '%';
+    confDiv.style.display = 'block';
+}
+
+// --- Reset Button Logic ---
+document.getElementById('reset-form').addEventListener('click', function () {
+    setTimeout(() => {
+        updateSummary();
+        document.getElementById('recommendation-result').innerHTML = '';
+        document.getElementById('recommendation-justification').style.display = 'none';
+        document.getElementById('confidence-score').style.display = 'none';
+        document.getElementById('comparison-table').style.display = 'none';
+    }, 10);
+});
+
+// --- Feedback Widget ---
+document.getElementById('feedback').addEventListener('change', function () {
+    if (this.value === 'yes') {
+        this.style.background = '#c8e6c9';
+    } else if (this.value === 'no') {
+        this.style.background = '#ffcdd2';
+    } else {
+        this.style.background = '';
+    }
+});
+
+// --- Accessibility: Focus on recommendation result after submit ---
+function focusRecommendation() {
+    const rec = document.getElementById('recommendation-result');
+    if (rec) rec.setAttribute('tabindex', '-1');
+    rec && rec.focus && rec.focus();
+}
+
+// --- Comparison Table (stub, to be filled with real data if needed) ---
+function showComparisonTable(options) {
+    const tableDiv = document.getElementById('comparison-table');
+    if (!options || !options.length) {
+        tableDiv.style.display = 'none';
+        return;
+    }
+    let html = '<table><tr><th>Option</th><th>Strengths</th><th>Weaknesses</th></tr>';
+    options.forEach(opt => {
+        html += `<tr><td>${opt.name}</td><td>${opt.strengths}</td><td>${opt.weaknesses}</td></tr>`;
+    });
+    html += '</table>';
+    tableDiv.innerHTML = '<h4>Compare Options</h4>' + html;
+    tableDiv.style.display = 'block';
+}
+
+// --- Advanced Settings Toggle ---
+const advToggle = document.getElementById('toggle-advanced');
+const advSettings = document.getElementById('advanced-settings');
+advToggle.addEventListener('click', function () {
+    const expanded = advToggle.getAttribute('aria-expanded') === 'true';
+    advToggle.setAttribute('aria-expanded', !expanded);
+    advSettings.style.display = expanded ? 'none' : 'block';
+    advToggle.textContent = expanded ? 'Show Advanced Settings' : 'Hide Advanced Settings';
 });
