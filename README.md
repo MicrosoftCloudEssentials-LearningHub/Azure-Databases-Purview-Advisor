@@ -18,6 +18,11 @@ Last updated: 2025-06-03
 
 </details>
 
+
+> [!IMPORTANT]
+> The [Azure Databases Advisor Tool](https://microsoftcloudessentials-learninghub.github.io/Azure-Databases-Purview/) is designed to help users select the most suitable Azure database service based on their specific use case. It provides recommendations by analyzing user inputs such as data type, scalability needs, latency requirements, and more.
+> The information provided and any document (such as scripts, sample codes, etc.) is provided `AS-IS` and `WITH ALL FAULTS`. Pricing estimates are for `demonstration purposes only and do not reflect final pricing`. `Microsoft assumes no liability` for your use of this information and makes no guarantees or warranties, expressed or implied, regarding its accuracy or completeness, including any pricing details. `Please note that these demos are intended as a guide and are based on personal experiences. For official guidance, support, or more detailed information, please refer to Microsoft's official documentation or contact Microsoft directly`: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
+
 ## Overview 
 
 <div align="center">
@@ -26,7 +31,6 @@ Last updated: 2025-06-03
 
 <details>
 <summary><b>Details</b> (Click to expand)</summary>
-
 
 > - **Formats**<br/>
 >     - Structured: Stored in predefined formats like rows and columns with consistent schema enforcement.<br/>
