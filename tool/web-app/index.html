@@ -111,26 +111,6 @@
                     <option value="no">No</option>
                 </select>
 
-                <button id="toggle-advanced" aria-expanded="false" type="button">Show Advanced Settings</button>
-                <div id="advanced-settings" style="display:none;">
-                    <label for="query-complexity">Query Complexity:
-                        <button class="tooltip-icon" aria-label="More info" data-tooltip="Select the complexity level of the queries you will perform. For instance, simple queries are used for CRUD operations, while complex queries are needed for AI/ML workloads.">ℹ️</button>
-                    </label>
-                    <select id="query-complexity" name="query-complexity">
-                        <option value="simple">Simple (CRUD, Key-Value)</option>
-                        <option value="moderate">Moderate (Joins, Aggregations)</option>
-                        <option value="complex">Complex (AI/ML, Graph, Analytics)</option>
-                    </select>
-
-                    <label for="data-retention">Data Retention Policy:
-                        <button class="tooltip-icon" aria-label="More info" data-tooltip="Specify how long you need to retain your data. For example, short-term retention is suitable for temporary logs, while long-term retention is needed for compliance data.">ℹ️</button>
-                    </label>
-                    <select id="data-retention" name="data-retention">
-                        <option value="short-term">Short-term (logs, cache)</option>
-                        <option value="medium-term">Medium-term (months, analytics)</option>
-                        <option value="long-term">Long-term (compliance, archive)</option>
-                    </select>
-                </div>
                 <button type="submit">Get Recommendation</button>
                 <button type="reset" id="reset-form">Reset Form</button>
             </form>
@@ -140,7 +120,7 @@
                 <h3>Live Summary</h3>
                 <ul id="summary-list"></ul>
             </div>
-            <!-- Advanced Settings Button Note -->
+            <!-- Advanced Settings Note -->
             <div id="advanced-settings-note" style="color:#c62828; margin-bottom:1em; display:none;">
                 <strong>Note:</strong> If the Advanced Settings button is not working, see <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/advanced-configuration" target="_blank" rel="noopener">Advanced Configuration for Azure Databases</a>.
             </div>
@@ -167,6 +147,17 @@
                         <option value="no">No</option>
                     </select>
                 </div>
+            </div>
+            <div id="advanced-settings" class="summary-card" style="margin-bottom:1em;">
+                <h4>Advanced Settings</h4>
+                <p>Advanced settings allow you to further customize your database solution for specific workloads or compliance requirements. Examples include:</p>
+                <ul>
+                    <li><strong>Query Complexity:</strong> Choose between simple (CRUD), moderate (joins, aggregations), or complex (AI/ML, graph, analytics) queries.</li>
+                    <li><strong>Data Retention Policy:</strong> Specify how long your data should be retained (short-term, medium-term, long-term) for compliance or cost optimization.</li>
+                    <li><strong>Backup and Disaster Recovery:</strong> Enable automated backups and geo-redundant disaster recovery for mission-critical workloads.</li>
+                    <li><strong>Security:</strong> Configure encryption, role-based access control, and compliance settings.</li>
+                </ul>
+                <p>Use these options to fine-tune your recommendation for your business or technical scenario.</p>
             </div>
         </section>
     </main>

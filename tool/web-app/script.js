@@ -128,20 +128,6 @@ const summaryIcons = {
     'query-complexity': '🧩',
     'data-retention': '⏳'
 };
-const docLinks = {
-    'data-volume': 'https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning#scalability-targets',
-    'data-type': 'https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview',
-    'latency': 'https://learn.microsoft.com/en-us/azure/azure-sql/database/performance-guidance-overview',
-    'scalability': 'https://learn.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally',
-    'consistency': 'https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels',
-    'integration-needs': 'https://learn.microsoft.com/en-us/azure/data-factory/introduction',
-    'security': 'https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview',
-    'budget': 'https://azure.microsoft.com/en-us/pricing/calculator/',
-    'use-case': 'https://learn.microsoft.com/en-us/azure/azure-sql/database/oltp-olap-overview',
-    'backup-recovery': 'https://learn.microsoft.com/en-us/azure/backup/backup-overview',
-    'query-complexity': 'https://learn.microsoft.com/en-us/azure/azure-sql/database/query-performance-insight-use',
-    'data-retention': 'https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-data-retention'
-};
 function updateSummary() {
     const ul = document.getElementById('summary-list');
     ul.innerHTML = '';
@@ -150,9 +136,8 @@ function updateSummary() {
         if (el) {
             const label = document.querySelector(`label[for="${id}"]`);
             const icon = summaryIcons[id] || '';
-            const doc = docLinks[id] ? `<a href="${docLinks[id]}" target="_blank" class="doc-link" title="Microsoft documentation" style="margin-left:0.4em;font-size:1.1em;">🔗</a>` : '';
             const li = document.createElement('li');
-            li.innerHTML = `<span class="summary-icon">${icon}</span><span class="summary-label">${label ? label.childNodes[0].textContent.trim() : id}:</span> <span>${el.value}</span>${doc}`;
+            li.innerHTML = `<span class="summary-icon">${icon}</span><span class="summary-label">${label ? label.childNodes[0].textContent.trim() : id}:</span> <span>${el.value}</span>`;
             ul.appendChild(li);
         }
     });
