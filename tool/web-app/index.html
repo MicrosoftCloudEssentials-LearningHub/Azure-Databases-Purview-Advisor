@@ -103,14 +103,6 @@
                     <option value="AI/ML">AI/ML Workloads</option>
                 </select>
 
-                <label for="backup-recovery">Backup and Disaster Recovery:
-                    <span class="info-icon" tabindex="0" data-tooltip="Indicate if you need automated backup and recovery options. For example, disaster recovery is essential for mission-critical systems.">ℹ️</span>
-                </label>
-                <select id="backup-recovery" name="backup-recovery">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-
                 <button type="submit">Get Recommendation</button>
                 <button type="reset" id="reset-form">Reset Form</button>
             </form>
@@ -120,9 +112,47 @@
                 <h3>Live Summary</h3>
                 <ul id="summary-list"></ul>
             </div>
-            <!-- Advanced Settings Note -->
-            <div id="advanced-settings-note" style="color:#c62828; margin-bottom:1em; display:none;">
-                <strong>Note:</strong> If the Advanced Settings button is not working, see <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/advanced-configuration" target="_blank" rel="noopener">Advanced Configuration for Azure Databases</a>.
+            <div id="advanced-settings" class="summary-card" style="margin-bottom:1em;">
+                <h4>Advanced Settings</h4>
+                <div class="advanced-setting">
+                    <label for="query-complexity">Query Complexity
+                        <span class="info-icon" tabindex="0" data-tooltip="Select the complexity level of the queries you will perform. For example, simple queries are used for CRUD operations, while complex queries are needed for AI/ML workloads.">ℹ️</span>
+                    </label>
+                    <select id="query-complexity" name="query-complexity">
+                        <option value="simple">Simple (CRUD, Key-Value)</option>
+                        <option value="moderate">Moderate (Joins, Aggregations)</option>
+                        <option value="complex">Complex (AI/ML, Graph, Analytics)</option>
+                    </select>
+                </div>
+                <div class="advanced-setting">
+                    <label for="data-retention">Data Retention Policy
+                        <span class="info-icon" tabindex="0" data-tooltip="Specify how long you need to retain your data. For example, short-term retention is suitable for temporary logs, while long-term retention is needed for compliance data.">ℹ️</span>
+                    </label>
+                    <select id="data-retention" name="data-retention">
+                        <option value="short-term">Short-term (logs, cache)</option>
+                        <option value="medium-term">Medium-term (months, analytics)</option>
+                        <option value="long-term">Long-term (compliance, archive)</option>
+                    </select>
+                </div>
+                <div class="advanced-setting">
+                    <label for="backup-recovery">Backup and Disaster Recovery
+                        <span class="info-icon" tabindex="0" data-tooltip="Enable automated backups and geo-redundant disaster recovery for mission-critical workloads.">ℹ️</span>
+                    </label>
+                    <select id="backup-recovery" name="backup-recovery">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="advanced-setting">
+                    <label for="security">Security
+                        <span class="info-icon" tabindex="0" data-tooltip="Configure encryption, role-based access control, and compliance settings.">ℹ️</span>
+                    </label>
+                    <select id="security" name="security">
+                        <option value="encryption">Encryption</option>
+                        <option value="rbac">Role-based Access Control</option>
+                        <option value="compliance">Compliance</option>
+                    </select>
+                </div>
             </div>
             <div id="recommendation-panel">
                 <div id="loading-spinner" style="display:none;">Loading...</div>
@@ -139,25 +169,6 @@
                     <!-- Table will be generated dynamically -->
                 </div>
                 <button id="export-btn" style="display:none;">Export/Share</button>
-                <div id="feedback-section">
-                    <label for="feedback">Was this recommendation helpful?</label>
-                    <select id="feedback" name="feedback">
-                        <option value="">-- Select --</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-            </div>
-            <div id="advanced-settings" class="summary-card" style="margin-bottom:1em;">
-                <h4>Advanced Settings</h4>
-                <p>Advanced settings allow you to further customize your database solution for specific workloads or compliance requirements. Examples include:</p>
-                <ul>
-                    <li><strong>Query Complexity:</strong> Choose between simple (CRUD), moderate (joins, aggregations), or complex (AI/ML, graph, analytics) queries.</li>
-                    <li><strong>Data Retention Policy:</strong> Specify how long your data should be retained (short-term, medium-term, long-term) for compliance or cost optimization.</li>
-                    <li><strong>Backup and Disaster Recovery:</strong> Enable automated backups and geo-redundant disaster recovery for mission-critical workloads.</li>
-                    <li><strong>Security:</strong> Configure encryption, role-based access control, and compliance settings.</li>
-                </ul>
-                <p>Use these options to fine-tune your recommendation for your business or technical scenario.</p>
             </div>
         </section>
     </main>
