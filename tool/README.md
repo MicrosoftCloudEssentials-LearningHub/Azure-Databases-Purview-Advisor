@@ -28,7 +28,7 @@ Last updated: 2025-06-20
 </details>
 
 
-> The [Azure Databases Advisor Tool](https://microsoftcloudessentials-learninghub.github.io/Azure-Databases-Purview/) is designed to help users select the most suitable Azure database service based on their specific use case. It provides recommendations by analyzing user inputs such as data type, scalability needs, latency requirements, and more.
+> The [Azure Databases Advisor Tool](https://microsoftcloudessentials-learninghub.github.io/Azure-Databases-Purview-Advisor/) is designed to help users select the most suitable Azure database service based on their specific use case. It provides recommendations by analyzing user inputs such as data type, scalability needs, latency requirements, and more.
 
 This tool consists of:
 - **Static Frontend**: A web-based interface for users to input their requirements and view recommendations. The frontend operates independently and uses hardcoded logic for recommendations.
