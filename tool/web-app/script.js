@@ -305,7 +305,7 @@ function showJustification(justification, confidence) {
     <div style="font-size:0.97em;color:#b71c1c;margin-bottom:0.5em;">
         <strong>Disclaimer:</strong> This tool is an advisor only. For official guidance, support, or more detailed information, please refer to <a href='https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME' target='_blank' rel='noopener'>Microsoft Sales and Support</a> or the official Microsoft documentation.
     </div>`;
-    document.getElementById('justification-text').innerHTML = extendedDef + justification;
+    document.getElementById('justification-text').innerHTML = extendedDef;
     justDiv.style.display = 'block';
     document.getElementById('confidence-value').textContent = confidence + '%';
     confDiv.style.display = 'block';
