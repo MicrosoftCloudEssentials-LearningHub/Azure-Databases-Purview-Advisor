@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Enable dark mode by default
+    document.body.classList.add('dark-mode');
+
     const steps = document.querySelectorAll('.step');
     let currentStep = 0;
 
