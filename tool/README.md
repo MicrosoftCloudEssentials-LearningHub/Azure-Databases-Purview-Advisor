@@ -17,22 +17,18 @@ Last updated: 2025-06-20
 
 - [Azure Storage Scalability Targets](https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning#scalability-targets)
 - [Types of Data in Azure](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
-- [Performance best practices for Azure SQL Database and Azure SQL Managed Instance](https://learn.microsoft.com/en-us/azure/azure-sql/database/performance-guidance-overview)
 - [Global Distribution with Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally)
 - [Consistency Levels in Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels)
 - [Introduction to Azure Data Factory](https://learn.microsoft.com/en-us/azure/data-factory/introduction)
 - [Security overview for Azure SQL Database and Azure SQL Managed Instance](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview)
 - [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
-- [OLTP and OLAP in Azure SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/oltp-olap-overview)
 - [Azure Backup and Disaster Recovery](https://learn.microsoft.com/en-us/azure/backup/backup-overview)
 - [Query Performance Insight](https://learn.microsoft.com/en-us/azure/azure-sql/database/query-performance-insight-use)
-- [Data retention and deletion in Microsoft Azure](https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-data-retention)
 
 </details>
 
-## Overview
 
-The **Azure Databases Advisor Tool** is designed to help users select the most suitable Azure database service based on their specific use case. It provides recommendations by analyzing user inputs such as data type, scalability needs, latency requirements, and more.
+> The [Azure Databases Advisor Tool](https://microsoftcloudessentials-learninghub.github.io/Azure-Databases-Purview/) is designed to help users select the most suitable Azure database service based on their specific use case. It provides recommendations by analyzing user inputs such as data type, scalability needs, latency requirements, and more.
 
 This tool consists of:
 - **Static Frontend**: A web-based interface for users to input their requirements and view recommendations. The frontend operates independently and uses hardcoded logic for recommendations.
@@ -60,66 +56,75 @@ tool/
 
 ## Usage
 
-### Frontend
-The static web app is deployed via Azure Static Web Apps or GitHub Pages. It provides an interactive form for users to input their requirements. By default, the frontend operates independently and uses hardcoded logic for recommendations.
+<details>
+<summary><strong>Frontend (Click here to expand)</strong></summary>
 
-### Backend (Optional)
-The backend (Flask API) processes user inputs and generates recommendations dynamically. To enable backend functionality:
+> The static web app is deployed via Azure Static Web Apps or GitHub Pages. It provides an interactive form for users to input their requirements. By default, the frontend operates independently and uses hardcoded logic for recommendations.
+
+</details>
+
+<details>
+<summary><strong>Backend (Click here to expand) - Optional </strong></summary>
+
+> The backend (Flask API) processes user inputs and generates recommendations dynamically. To enable backend functionality:
+
 1. Deploy the Flask API (`app.py`) to Azure App Service or Azure Functions.
 2. Update the backend URL in `script.js` to point to the deployed API.
 
-### Deployment Instructions
+</details>
 
-#### Backend Deployment
+<details>
+<summary><strong>Deployment Instructions (Click here to expand)</strong></summary>
+
+> **Backend Deployment**:
 1. Use Azure App Service or Azure Functions to deploy the Flask API (`app.py`).
 2. Ensure the API endpoint is accessible to the frontend.
 3. Use Azure Monitor for logging and diagnostics.
 
-#### Frontend Deployment
+> **Frontend Deployment**:
 1. Deploy the static web app (`index.html`, `script.js`, `styles.css`) to Azure Static Web Apps.
 2. Update the backend URL in `script.js` to point to the deployed API (if using the backend).
 
-#### Security
+</details>
+
+<details>
+<summary><strong>Security (Click here to expand)</strong></summary>
+
 - Secure API endpoints with Azure Active Directory (AAD) authentication.
 - Use HTTPS for all communications.
 
+</details>
+
 ## Expanded Questionnaire
 
-The tool now includes the following questions to refine recommendations:
-- **Data Volume**: Expected size and growth.
-  - Options: `<10GB`, `10GB-1TB`, `>1TB`.
-- **Data Type**: Structured, semi-structured, or unstructured.
-  - Options: `Structured`, `Semi-structured`, `Unstructured`.
-- **Latency Requirements**: Maximum acceptable delay for database operations.
-  - Options: `<10ms`, `10-100ms`, `>100ms`.
-- **Scalability Needs**: Horizontal or vertical scaling, global distribution.
-  - Options: `Global`, `Local`.
-- **Consistency Model**: Strong or eventual consistency.
-  - Options: `Strong`, `Eventual`.
-- **Integration Needs**: Compatibility with Azure services.
-  - Options: `Yes`, `No`.
-- **Security Requirements**: Encryption, role-based access control, compliance requirements.
-  - Options: `Encryption`, `RBAC`, `Compliance`.
-- **Budget Constraints**: Monthly budget for database services.
-  - Options: `<100 USD`, `100-500 USD`, `>500 USD`.
-- **Use Case Specifics**: OLTP, OLAP, or AI/ML workloads.
-  - Options: `OLTP`, `OLAP`, `AI/ML`.
-- **Backup and Disaster Recovery**: Automated backups and disaster recovery options.
-  - Options: `Yes`, `No`.
-- **Query Complexity**: Expected complexity of database queries.
-  - Options: `Simple`, `Moderate`, `Complex`.
-- **Data Retention Policy**: Retention period for data.
-  - Options: `Short-term`, `Medium-term`, `Long-term`.
+> The tool now includes the following questions to refine recommendations:
 
-## Advanced Settings
+<details>
+  <summary><strong>View All Options (Click to expand)</strong></summary>
+  <table>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Data Volume</td><td>&lt;10GB, 10GB-1TB, &gt;1TB</td></tr>
+      <tr><td>Data Type</td><td>Structured, Semi-structured, Unstructured</td></tr>
+      <tr><td>Latency Requirements</td><td>&lt;10ms, 10-100ms, &gt;100ms</td></tr>
+      <tr><td>Scalability Needs</td><td>Global, Local</td></tr>
+      <tr><td>Consistency Model</td><td>Strong, Eventual</td></tr>
+      <tr><td>Integration Needs</td><td>Yes, No</td></tr>
+      <tr><td>Security Requirements</td><td>Encryption, RBAC, Compliance</td></tr>
+      <tr><td>Budget Constraints</td><td>&lt;100 USD, 100-500 USD, &gt;500 USD</td></tr>
+      <tr><td>Use Case</td><td>OLTP, OLAP, AI/ML</td></tr>
+      <tr><td>Backup & Recovery</td><td>Yes, No</td></tr>
+      <tr><td>Query Complexity</td><td>Simple, Moderate, Complex</td></tr>
+      <tr><td>Data Retention</td><td>Short-term, Medium-term, Long-term</td></tr>
+    </tbody>
+  </table>
+</details>
 
-If the "Advanced Settings" button is not working, please refer to [Advanced Configuration for Azure Databases](https://learn.microsoft.com/en-us/azure/azure-sql/database/advanced-configuration) for more information.
-
-## Example Recommendation Flow
-
-1. User selects **structured data** with **global distribution** and **high throughput**.
-2. The tool recommends **Azure Cosmos DB (SQL API)**.
-3. Links to Azure documentation are provided for further exploration.
 
 <div align="center">
   <h3 style="color: #4CAF50;">Total Visitors</h3>
