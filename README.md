@@ -85,7 +85,8 @@ graph TB
 <details>
 <summary><b>Azure SQL Database</b> (PaaS) - Click to expand </summary>
 
-> - **Description:** Fully managed PaaS Database Engine that automates upgrades, patching, backups, and monitoring.<br/>
+> Fully managed PaaS Database Engine that automates upgrades, patching, backups, and monitoring.
+
 > - **Benefits:** Reduces management overhead and total cost of ownership.<br/>
 > - **Differentiators:** Built-in high availability, scalability, and security.<br/>
 > - **Use Cases:** Ideal for modern cloud applications requiring performance, scale, and low operational maintenance.<br/>
@@ -98,7 +99,8 @@ Click here to read more about a [quick guide on Azure SQL Database](./sql/azure-
 <details>
 <summary><b>Azure SQL Managed Instance</b> (PaaS) - Click to expand </summary>
 
-> - **Description:** Fully managed SQL Server instance with near-complete compatibility with on-premises SQL Server.<br/>
+> Fully managed SQL Server instance with near-complete compatibility with on-premises SQL Server.
+
 > - **Benefits:** Simplifies migration from on-premises without code changes.<br/>
 > - **Differentiators:** Supports SQL Server Agent, linked servers, and cross-database transactions.<br/>
 > - **Use Cases:** Enterprise app migrations from legacy environments.<br/>
@@ -111,7 +113,8 @@ Click here to read more about a [quick guide on Azure SQL Managed Instance](./sq
 <details>
 <summary><b>SQL Server on Azure Virtual Machines</b> (IaaS) - Click to expand </summary>
 
-> - **Description:** SQL Server running on Azure VMs, offering full OS-level access and control.<br/>
+> SQL Server running on Azure VMs, offering full OS-level access and control.
+
 > - **Benefits:** Offers flexibility and customization for apps with unique OS or database dependencies.<br/>
 > - **Differentiators:** Supports specialized SQL Server features not available in PaaS offerings.<br/>
 > - **Use Cases:** Best for lift-and-shift migrations requiring full control and legacy support.<br/>
@@ -124,7 +127,8 @@ Click here to read more about a [quick guide on SQL Server on Azure Virtual Mach
 <details>
 <summary><b>Azure Database for PostgreSQL</b> (PaaS) - Click to expand </summary>
 
-> - **Description:** Enterprise-ready community PostgreSQL database service, fully managed by Microsoft.<br/>
+>  Enterprise-ready community PostgreSQL database service, fully managed by Microsoft.
+
 > - **Benefits:** High availability with up to 99.99% SLA, built-in security, and scalability.<br/>
 > - **Differentiators:** Supports PostgreSQL extensions and advanced indexing options.<br/>
 > - **Use Cases:** Cloud-native applications using PostgreSQL frameworks like Django or Flask.<br/>
@@ -137,7 +141,8 @@ Click here to read more about a [quick guide on Azure Database for PostgreSQL](.
 <details>
 <summary><b>Azure Database for MySQL</b> (PaaS) - Click to expand </summary>
 
-> - **Description:** Managed MySQL service providing open-source compatibility and built-in scaling.<br/>
+> Managed MySQL service providing open-source compatibility and built-in scaling.
+
 > - **Benefits:** Automatic backups, patching, high availability, and zone redundancy.<br/>
 > - **Differentiators:** Community edition with scalable performance tiers.<br/>
 > - **Use Cases:** Applications using PHP, Ruby, or Node.js; WordPress and ecommerce platforms.<br/>
@@ -150,7 +155,8 @@ Click here to read more about a [quick guide on Azure Database for MySQL](./sql/
 <details>
 <summary><b>Oracle Database on Azure</b> (IaaS) - Click to expand </summary>
 
-> - **Description:** Enables customers to run Oracle workloads directly on Azure infrastructure.<br/>
+> Enables customers to run Oracle workloads directly on Azure infrastructure.
+
 > - **Benefits:** Leverages existing Oracle licenses and integrations with Azure services.<br/>
 > - **Differentiators:** Official Oracle support with flexible deployment topologies.<br/>
 > - **Use Cases:** Running core enterprise Oracle applications with high availability.<br/>
@@ -163,7 +169,8 @@ Click here to read more about a [quick guide on Oracle Database on Azure](./sql/
 <details>
 <summary><b>SQL Server 2022</b> (IaaS) - Click to expand </summary>
 
-> - **Description:** Latest release of SQL Server with built-in hybrid and cloud-connected capabilities.<br/>
+>  Latest release of SQL Server with built-in hybrid and cloud-connected capabilities.
+
 > - **Benefits:** Brings innovations like ledger tables, Synapse Link, and built-in security enhancements.<br/>
 > - **Differentiators:** Full hybrid flexibility for modern apps with backward compatibility.<br/>
 > - **Use Cases:** Enterprise apps requiring up-to-date SQL features and strong cloud connectivity.<br/>
@@ -176,7 +183,8 @@ Click here to read more about a [quick guide on SQL Server 2022](./sql/sql-serve
 <details>
 <summary><b>Azure Cosmos DB</b> (PaaS) - Click to expand </summary>
 
-> - **Description:** Globally distributed, multi-model NoSQL database for ultra-low latency and high throughput.<br/>
+> Globally distributed, multi-model NoSQL database for ultra-low latency and high throughput.
+
 > - **Benefits:** Turnkey global replication, automatic scaling, and multi-region writes.<br/>
 > - **Differentiators:** Supports multiple APIs (SQL, MongoDB, Cassandra, Gremlin, Table).<br/>
 > - **Use Cases:** IoT, retail, gaming, real-time personalization, and telemetry apps.<br/>
@@ -189,7 +197,8 @@ Click here to read more about a [quick guide on Azure Cosmos DB](./nosql/azure-c
 <details>
 <summary><b>Azure Managed Instance for Apache Cassandra</b> (PaaS) - Click to expand </summary>
 
-> - **Description:** Managed Cassandra database service designed for massive scale and availability.<br/>
+>  Managed Cassandra database service designed for massive scale and availability.
+
 > - **Benefits:** Built-in automation, scalability, and hybrid deployment options.<br/>
 > - **Differentiators:** Supports native Cassandra drivers and schemas with Azure-managed benefits.<br/>
 > - **Use Cases:** Wide-column workloads such as product catalogs, fraud detection, and event monitoring.<br/>
@@ -202,7 +211,8 @@ Click here to read more about a [quick guide on Azure Managed Instance for Apach
 <details>
 <summary><b>Azure Cosmos DB for MongoDB</b> (PaaS)</summary>
 
-> - **Description:** Fully managed implementation of MongoDB using Cosmos DB’s global infrastructure.<br/>
+> Fully managed implementation of MongoDB using Cosmos DB’s global infrastructure.
+
 > - **Benefits:** Globally available with strong SLAs and elastic scalability.<br/>
 > - **Differentiators:** Offers wire protocol compatibility with native MongoDB SDKs and tools.<br/>
 > - **Use Cases:** Web apps, content management, cataloging, and personalized recommendation engines.<br/>
@@ -215,7 +225,8 @@ Click here to read more about a [quick guide on Azure Cosmos DB for MongoDB](./n
 <details>
 <summary><b>MongoDB Atlas on Azure</b> (SaaS) - Click to expand </summary>
 
-> - **Description:** Official managed MongoDB service deployed in Azure’s cloud infrastructure.<br/>
+> Official managed MongoDB service deployed in Azure’s cloud infrastructure.
+
 > - **Benefits:** High automation, operational best practices, and global clusters.<br/>
 > - **Differentiators:** Offers native integration with MongoDB features and support from MongoDB Inc.<br/>
 > - **Use Cases:** Mobile and IoT apps, gaming, metadata management, and logging platforms.<br/>
@@ -228,7 +239,8 @@ Click here to read more about a [quick guide on MongoDB Atlas on Azure](./nosql/
 <details>
 <summary><b>Azure Cache for Redis</b> (PaaS) - Click to expand </summary>
 
-> - **Description:** In-memory data store used for caching, messaging, and fast key-value operations.<br/>
+> In-memory data store used for caching, messaging, and fast key-value operations.
+
 > - **Benefits:** Ultra-low latency and high throughput data access.<br/>
 > - **Differentiators:** Fully managed Redis with security, scaling, and geo-replication.<br/>
 > - **Use Cases:** Session stores, real-time leaderboards, background task queues.<br/>
