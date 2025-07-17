@@ -4,7 +4,7 @@ Costa Rica
 
 [![Microsoft Purview](https://img.shields.io/badge/Microsoft-Purview-blue)](https://learn.microsoft.com/en-us/azure/purview/)
 
-Last updated: 2025-06-19
+Last updated: 2025-07-17
 
 ---
 

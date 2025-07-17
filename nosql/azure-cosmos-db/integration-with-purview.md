@@ -4,7 +4,7 @@ Costa Rica
 
 [![Microsoft Purview](https://img.shields.io/badge/Microsoft-Purview-blue)](https://learn.microsoft.com/en-us/azure/purview/) [![Azure Cosmos DB](https://img.shields.io/badge/Azure-CosmosDB-blue)](https://learn.microsoft.com/en-us/azure/cosmos-db/)
 
-Last updated: 2025-06-19
+Last updated: 2025-07-17
 
 ---
 

@@ -4,7 +4,7 @@ Costa Rica
 
 [![Microsoft Purview](https://img.shields.io/badge/Microsoft-Purview-blue)](https://learn.microsoft.com/en-us/azure/purview/) [![Azure Managed Instance for Apache Cassandra](https://img.shields.io/badge/Azure-Cassandra%20Managed%20Instance-blue)](https://learn.microsoft.com/en-us/azure/managed-instance-apache-cassandra/)
 
-Last updated: 2025-06-20
+Last updated: 2025-07-17
 
 ---
 
