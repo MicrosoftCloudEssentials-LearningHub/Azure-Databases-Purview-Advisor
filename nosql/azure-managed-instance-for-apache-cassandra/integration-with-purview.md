@@ -27,7 +27,6 @@ Last updated: 2025-07-17
   - [Metadata Extraction](#metadata-extraction)
   - [Data Classification](#data-classification)
 - [DLP and Governance](#dlp-and-governance)
-  - [Example DLP Policies](#example-dlp-policies)
 - [Cost Monitoring](#cost-monitoring)
 - [Best Practices](#best-practices)
 - [Unity Catalog Use Case](#unity-catalog-use-case)
