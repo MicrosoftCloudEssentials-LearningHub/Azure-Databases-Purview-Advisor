@@ -27,10 +27,10 @@ Last updated: 2025-07-17
 
 </details>
 
-
 > The [Azure Databases Advisor Tool](https://microsoftcloudessentials-learninghub.github.io/Azure-Databases-Purview-Advisor/) is designed to help users select the most suitable Azure database service based on their specific use case. It provides recommendations by analyzing user inputs such as data type, scalability needs, latency requirements, and more.
 
 This tool consists of:
+
 - **Static Frontend**: A web-based interface for users to input their requirements and view recommendations. The frontend operates independently and uses hardcoded logic for recommendations.
 - **Optional Backend**: A Flask API that processes user inputs and provides dynamic recommendations. The backend must be deployed separately to enable advanced functionality.
 
@@ -77,11 +77,13 @@ tool/
 <summary><strong>Deployment Instructions (Click here to expand)</strong></summary>
 
 > **Backend Deployment**:
+
 1. Use Azure App Service or Azure Functions to deploy the Flask API (`app.py`).
 2. Ensure the API endpoint is accessible to the frontend.
 3. Use Azure Monitor for logging and diagnostics.
 
 > **Frontend Deployment**:
+
 1. Deploy the static web app (`index.html`, `script.js`, `styles.css`) to Azure Static Web Apps.
 2. Update the backend URL in `script.js` to point to the deployed API (if using the backend).
 
@@ -127,7 +129,7 @@ tool/
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-31-limegreen" alt="Total views">
-  <p>Refresh Date: 2025-07-16</p>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
 <!-- END BADGE -->

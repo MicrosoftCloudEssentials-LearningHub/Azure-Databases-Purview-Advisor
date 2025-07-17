@@ -6,12 +6,11 @@ Costa Rica
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [brown9804](https://github.com/brown9804)
 
-Last updated: 2025-06-03
+Last updated: 2025-07-17
 
 ----------
 
 > Azure SQL Managed Instance is a fully managed SQL Server instance that provides near-complete compatibility with on-premises SQL Server. It is designed to simplify the migration of existing applications to the cloud without requiring code changes.
-
 
 <details>
 <summary>List of References</summary>
@@ -43,6 +42,7 @@ Last updated: 2025-06-03
 - **Compatibility**: Supports SQL Server Agent, linked servers, and cross-database transactions, making it suitable for enterprise applications.
 
 ## Use Cases
+
 - Ideal for enterprise app migrations from legacy environments.
 - Suitable for applications that require SQL Server features not available in Azure SQL Database.
 
@@ -80,7 +80,6 @@ VALUES (1, 'John', 'Doe', '2023-01-15');
 | Use Cases | Cloud-native apps | Lift-and-shift of legacy SQL workloads |
 | Linked Servers | Unsupported | Supported |
 
-
 ## Implications of Using SQL Server Agent in a Managed Instance
 
 > This support is particularly useful when trying to preserve automation behavior after migration from on-premises environments.
@@ -106,11 +105,9 @@ VALUES (1, 'John', 'Doe', '2023-01-15');
   - Use **backup/restore to Azure Blob Storage** for full database fidelity.
   - Or use **Azure DMS with continuous sync** for minimal downtime transitions.
 
-
-
-
-
+<!-- START BADGE -->
 <div align="center">
-  <h3 style="color: #4CAF50;">Total Visitors</h3>
-  <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img src="https://img.shields.io/badge/Total%20views-9-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-16</p>
 </div>
+<!-- END BADGE -->

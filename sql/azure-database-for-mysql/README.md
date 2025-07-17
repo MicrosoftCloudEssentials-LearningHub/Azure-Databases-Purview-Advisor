@@ -6,7 +6,7 @@ Costa Rica
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [brown9804](https://github.com/brown9804)
 
-Last updated: 2025-06-03
+Last updated: 2025-07-17
 
 ----------
 
@@ -81,17 +81,16 @@ cursor.close()
 connection.close()
 ```
 
-
 ## Using Azure Database for MySQL in a Microservices Architecture
 
 > In a microservices architecture, each service typically owns its own data store. Azure Database for MySQL fits well into this model due to its **flexibility, scalability, and managed nature**.
 
 **Implications:**
+
 - **Database-per-Service Pattern**: Azure allows each microservice to have its own isolated MySQL instance or schema, promoting loose coupling and independent scaling.
 - **Polyglot Persistence**: You can mix MySQL with other Azure-managed databases (like PostgreSQL or Cosmos DB) across services, depending on the workload.
 - **Operational Overhead Reduction**: Azure handles patching, backups, and high availability, letting teams focus on service logic rather than infrastructure.
 - **Integration with Azure Kubernetes Service (AKS)**: Ideal for containerized microservices, enabling secure and performant connectivity via VNET integration and private endpoints.
-
 
 ## Performance Tuning Options in Azure Database for MySQL
 
@@ -113,8 +112,6 @@ connection.close()
 - **Advanced Threat Protection**: Detects anomalous activities and potential vulnerabilities.
 - **Compliance Certifications**: Includes ISO 27001, HIPAA, PCI DSS, SOC 1/2/3, FedRAMP High, and more.
 
-
-
 ## Comparing Azure Database for MySQL with Other Azure Managed Databases
 
 > Azure Database for MySQL is ideal for developers who want **open-source compatibility** with the benefits of a managed platform.
@@ -127,7 +124,6 @@ connection.close()
 | **Data Model** | Relational (MySQL) | Relational (T-SQL) | NoSQL (document, key-value, graph) |
 | **Open Source** | Yes | No | No |
 
-
 ## Strategies for Migrating MySQL Databases to Azure
 
 > Azure supports several migration paths depending on your source environment and downtime tolerance, for large databases (hundreds of GBs to TBs), parallel dump/restore tools and staging VMs in Azure can significantly reduce migration time.
@@ -137,8 +133,9 @@ connection.close()
 - **Replication-Based Migration**: Set up replication from source to Azure MySQL for near-zero downtime cutovers.
 - **Pre-Migration Assessment**: Use tools like **Azure Migrate** or **MySQL Workbench** to assess compatibility and performance implications.
 
-
+<!-- START BADGE -->
 <div align="center">
-  <h3 style="color: #4CAF50;">Total Visitors</h3>
-  <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
+<!-- END BADGE -->

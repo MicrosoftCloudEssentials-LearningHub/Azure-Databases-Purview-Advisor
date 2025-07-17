@@ -4,7 +4,7 @@ Costa Rica
 
 [![Microsoft Purview](https://img.shields.io/badge/Microsoft-Purview-blue)](https://learn.microsoft.com/en-us/azure/purview/) [![Azure PostgreSQL](https://img.shields.io/badge/Azure-PostgreSQL-blue)](https://learn.microsoft.com/en-us/azure/postgresql/)
 
-Last updated: 2025-06-19
+Last updated: 2025-07-17
 
 ---
 
@@ -68,6 +68,7 @@ Last updated: 2025-06-19
 > Fulfill data subject requests and enforce retention policies on customer records.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Apply to tables like `customers`, `login_sessions`, `preferences`.
 2. **Define Detection Rules:** Use classifiers for names, emails, phone numbers, and IP addresses.
 3. **Set Actions:**  
@@ -83,6 +84,7 @@ Last updated: 2025-06-19
 > Protect payment records in compliance with PCI DSS or local finance laws.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Focus on tables like `transactions`, `billing_statements`, `refunds`.
 2. **Define Detection Rules:** Detect patterns like credit card numbers, bank routing codes, or IBANs.
 3. **Set Actions:**  
@@ -98,6 +100,7 @@ Last updated: 2025-06-19
 > Enforce HIPAA-equivalent practices for healthcare-related apps built on PostgreSQL.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Scan tables like `medical_visits`, `patient_conditions`, `insurance_claims`.
 2. **Define Detection Rules:** Detect MRNs, ICD-10 codes, medication fields.
 3. **Set Actions:**  
@@ -112,12 +115,14 @@ Last updated: 2025-06-19
 > Integrating with Purview introduces additional costs for scanning, classification, and governance. Below is a breakdown and example budget.
 
 > [!NOTE]
+>
 > - Costs may vary based on region, scan frequency, and data volume.
 > - Use [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) for precise estimates.
 > - Set up budgets and alerts in [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/) to avoid overruns.
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
+>
 > - **Data Map** (capacity units, always-on)
 > - **Scanning** (pay-as-you-go, based on vCore usage and scan duration)
 > - **Managed Virtual Network** and **API/Data Transfer** costs for cross-cloud governance
@@ -150,7 +155,9 @@ Last updated: 2025-06-19
 - Lower compliance risk through automated audits and DLP enforcement.
 - Empowered data consumers with governed, cataloged, and discoverable datasets.
 
+<!-- START BADGE -->
 <div align="center">
-  <h3 style="color: #4CAF50;">Total Visitors</h3>
-  <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
+<!-- END BADGE -->

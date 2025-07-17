@@ -4,7 +4,7 @@ Costa Rica
 
 [![Microsoft Purview](https://img.shields.io/badge/Microsoft-Purview-blue)](https://learn.microsoft.com/en-us/azure/purview/) [![Azure Database for MySQL](https://img.shields.io/badge/Azure-MySQL-blue)](https://learn.microsoft.com/en-us/azure/mysql/)
 
-Last updated: 2025-06-19
+Last updated: 2025-07-17
 
 ---
 
@@ -24,15 +24,15 @@ Last updated: 2025-06-19
 <summary>Table of Content</summary>
 
 - [How to Integrate Azure Database for MySQL with Purview](#how-to-integrate-azure-database-for-mysql-with-purview)
-    - [Registering the MySQL Database in Purview](#registering-the-mysql-database-in-purview)
-    - [Enabling Unity Data Governance](#enabling-unity-data-governance)
-    - [Data Classification and Labeling](#data-classification-and-labeling)
+  - [Registering the MySQL Database in Purview](#registering-the-mysql-database-in-purview)
+  - [Enabling Unity Data Governance](#enabling-unity-data-governance)
+  - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
-    - [Steps to Integrate](#steps-to-integrate)
-    - [Benefits](#benefits)
+  - [Steps to Integrate](#steps-to-integrate)
+  - [Benefits](#benefits)
       
 </details>
 
@@ -67,6 +67,7 @@ Last updated: 2025-06-19
 > Safeguard user payment preferences and account activity in SaaS platforms hosted on MySQL.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Apply to `subscriptions`, `payment_settings`, and `invoices`.
 2. **Define Detection Rules:** Use classifiers for credit card tokens, billing addresses, and transaction amounts.
 3. **Set Actions:**  
@@ -82,6 +83,7 @@ Last updated: 2025-06-19
 > Limit access to buyer preferences, addresses, and purchase patterns.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Focus on tables like `orders`, `shipping_info`, and `order_notes`.
 2. **Define Detection Rules:** Detect fields such as customer name, address, product SKUs, and delivery comments.
 3. **Set Actions:**  
@@ -97,6 +99,7 @@ Last updated: 2025-06-19
 > Prevent accidental leaks of sensitive environment metadata logged to MySQL by dev tools.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Apply to `debug_logs`, `system_diagnostics`, or `error_trace`.
 2. **Define Detection Rules:** Detect tokens, API keys, internal IPs, or exception traces.
 3. **Set Actions:**  
@@ -112,6 +115,7 @@ Last updated: 2025-06-19
 > Enforce localization by limiting access to user data based on country or regulatory region.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Target tables like `user_profile`, `preferences`, `order_location` with `region_code` or `country_id`.
 2. **Define Detection Rules:** Apply filters by jurisdiction (e.g., only users in LATAM).
 3. **Set Actions:**  
@@ -124,12 +128,14 @@ Last updated: 2025-06-19
 ## Cost Management and Budgeting
 
 > [!NOTE]
+>
 > - Costs may vary based on region, scan frequency, and data volume.
 > - Use [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) for precise estimates.
 > - Set up budgets and alerts in [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/) to avoid overruns.
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
+>
 > - **Data Map** (capacity units, always-on)
 > - **Scanning** (pay-as-you-go, based on vCore usage and scan duration)
 > - **Managed Virtual Network** and **API/Data Transfer** costs for cross-cloud governance
@@ -170,8 +176,9 @@ Last updated: 2025-06-19
 - Improved compliance and governance.
 - Centralized management of data assets.
 
-
+<!-- START BADGE -->
 <div align="center">
-  <h3 style="color: #4CAF50;">Total Visitors</h3>
-  <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
+<!-- END BADGE -->

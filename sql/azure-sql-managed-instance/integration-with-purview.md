@@ -5,7 +5,7 @@ Costa Rica
 [![Microsoft Purview](https://img.shields.io/badge/Microsoft-Purview-blue)](https://learn.microsoft.com/en-us/azure/purview/)
 [![Azure SQL Managed Instance](https://img.shields.io/badge/Azure-SQLMI-blue)](https://learn.microsoft.com/en-us/azure/sql-managed-instance/)
 
-Last updated: 2025-06-19
+Last updated: 2025-07-17
 
 ---
 
@@ -25,15 +25,15 @@ Last updated: 2025-06-19
 <summary>Table of Content</summary>
 
 - [How to Integrate Azure SQL Managed Instance with Purview](#how-to-integrate-azure-sql-managed-instance-with-purview)
-   - [Registering the SQL Managed Instance in Purview](#registering-the-sql-managed-instance-in-purview)
-   - [Enabling Unity Data Governance](#enabling-unity-data-governance)
-   - [Data Classification and Labeling](#data-classification-and-labeling)
+  - [Registering the SQL Managed Instance in Purview](#registering-the-sql-managed-instance-in-purview)
+  - [Enabling Unity Data Governance](#enabling-unity-data-governance)
+  - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
-   - [Steps to Integrate](#steps-to-integrate)
-   - [Benefits](#benefits)
+  - [Steps to Integrate](#steps-to-integrate)
+  - [Benefits](#benefits)
 
 </details>
 
@@ -68,6 +68,7 @@ Last updated: 2025-06-19
 > Secure access to supplier agreements and B2B NDAs hosted in SQL Managed Instance.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Focus on tables like `LegalDocuments`, `VendorContracts`, or `PartnerNDAs`.
 2. **Define Detection Rules:** Use keyword-based classifiers for contract terms, clause types, and party identifiers.
 3. **Set Actions:**  
@@ -83,6 +84,7 @@ Last updated: 2025-06-19
 > Prevent leakage of tenant data in multi-customer environments running on a shared SQL Managed Instance.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Classify tenant identifiers in tables like `CustomerData`, `BillingRecords`, or `AppUsage`.
 2. **Define Detection Rules:** Match against `tenant_id`, `org_id`, and region-specific markers.
 3. **Set Actions:**  
@@ -98,6 +100,7 @@ Last updated: 2025-06-19
 > Protect internal disaster recovery plans and business impact assessments stored in SQL MI.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Tag documentation tables like `DR_Playbooks`, `RecoveryPlans`, and `BCP_RiskAssessment`.
 2. **Define Detection Rules:** Detect sensitive recovery identifiers, backup architecture, and RTO/RPO values.
 3. **Set Actions:**  
@@ -111,6 +114,7 @@ Last updated: 2025-06-19
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
+>
 > - **Data Map** (capacity units, always-on)
 > - **Scanning** (pay-as-you-go, based on vCore usage and scan duration)
 > - **Managed Virtual Network** and **API/Data Transfer** costs for cross-cloud governance
@@ -120,6 +124,7 @@ Last updated: 2025-06-19
 > Click here to understand more about [Azure Purview Cost Estimation](../../Purview/Cost-Estimation.md)
 
 > [!NOTE]
+>
 > - Costs may vary based on region, scan frequency, and data volume.
 > - Use [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) for precise estimates.
 > - Set up budgets and alerts in [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/) to avoid overruns.

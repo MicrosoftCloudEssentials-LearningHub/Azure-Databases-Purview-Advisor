@@ -6,7 +6,7 @@ Costa Rica
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [brown9804](https://github.com/brown9804)
 
-Last updated: 2025-06-03
+Last updated: 2025-07-17
 
 ----------
 
@@ -38,11 +38,13 @@ Last updated: 2025-06-03
 </details>
 
 ## Benefits
+
 - **Flexibility**: Offers full control over the database environment, allowing for customization based on specific application needs.
 - **High Availability**: Ensures that Oracle applications remain available with built-in redundancy and failover capabilities.
 - **Cost Efficiency**: Allows organizations to utilize existing Oracle licenses, reducing overall costs.
 
 ## Use Cases
+
 - Running core enterprise Oracle applications that require high availability and performance.
 - Migrating legacy Oracle applications to the cloud for improved scalability and management.
 
@@ -98,7 +100,9 @@ CREATE TABLE employees (
 - **Fetch Size Tuning**: In hybrid or multicloud setups (e.g., Oracle DB in OCI, app in Azure), **increase fetch size** to reduce network round trips and latency.
 - **Networking**: Use **Accelerated Networking** and **Proximity Placement Groups** to reduce latency between app and DB tiers.
 
+<!-- START BADGE -->
 <div align="center">
-  <h3 style="color: #4CAF50;">Total Visitors</h3>
-  <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
+<!-- END BADGE -->

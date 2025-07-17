@@ -31,12 +31,12 @@ Last updated: 2025-07-17
 - [Free vs Enterprise](#free-vs-enterprise)
 - [Overview](#overview)
 - [Microsoft Purview Pricing Model](#microsoft-purview-pricing-model)
-    - [Key Differences](#key-differences)
+  - [Key Differences](#key-differences)
 - [How Microsoft Purview can be used](#how-microsoft-purview-can-be-used)
-    - [Scenario 1: Data Governance for a Financial Institution](#scenario-1-data-governance-for-a-financial-institution)
-    - [Scenario 2: Data Protection for a Healthcare Provider](#scenario-2-data-protection-for-a-healthcare-provider)
-    - [Scenario 3: Data Analytics for an E-commerce Company](#scenario-3-data-analytics-for-an-e-commerce-company)
-    - [Scenario 4: Compliance Management for a Global Enterprise](#scenario-4-compliance-management-for-a-global-enterprise)
+  - [Scenario 1: Data Governance for a Financial Institution](#scenario-1-data-governance-for-a-financial-institution)
+  - [Scenario 2: Data Protection for a Healthcare Provider](#scenario-2-data-protection-for-a-healthcare-provider)
+  - [Scenario 3: Data Analytics for an E-commerce Company](#scenario-3-data-analytics-for-an-e-commerce-company)
+  - [Scenario 4: Compliance Management for a Global Enterprise](#scenario-4-compliance-management-for-a-global-enterprise)
 - [Examples of use cases](#examples-of-use-cases)
 - [Collect metadata information from Apache Airflow](#collect-metadata-information-from-apache-airflow)
 
@@ -72,6 +72,7 @@ Last updated: 2025-07-17
 ## Overview 
 
 > Keypoints of Microsoft Purview: <br/>
+>
 > 1. `Integration with Microsoft Ecosystem`: Purview offers deep integration with Azure, Power BI, and Microsoft 365, providing a seamless experience for organizations already using these tools. <br/>
 > 2. `Advanced Governance and Compliance`: Purview provides robust governance and compliance features, ensuring your data management practices meet regulatory standards. <br/>
 > 3. `AI-Powered Search and Discovery`: With AI-driven capabilities, Purview enhances data discovery and classification, making it easier to find and manage data assets. <br/>
@@ -521,18 +522,20 @@ Find below different scenarios to manage data governance, protection, and compli
 > This capability is currently in public preview and is achieved through integration with **OpenLineage**, an open framework for data lineage collection and analysis.
 
 How it works:
+
 1. **Enable OpenLineage in Airflow**: By enabling OpenLineage in your Airflow instance, metadata and lineage information about jobs and datasets are automatically tracked as Directed Acyclic Graphs (DAGs) execute.
 2. **Azure Event Hubs**: The tracked metadata and lineage information are sent to an Azure Event Hubs instance that you configure.
 3. **Microsoft Purview**: Purview subscribes to the events from Azure Event Hubs, parses them, and ingests the metadata and lineage into the data map.
 
 This integration supports capturing metadata such as:
+
 - Airflow workspace
 - Airflow DAG
 - Airflow task
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-31-limegreen" alt="Total views">
-  <p>Refresh Date: 2025-07-16</p>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
 <!-- END BADGE -->

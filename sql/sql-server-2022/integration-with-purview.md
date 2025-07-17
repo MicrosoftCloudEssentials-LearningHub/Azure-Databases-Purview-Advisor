@@ -5,7 +5,7 @@ Costa Rica
 [![Microsoft Purview](https://img.shields.io/badge/Microsoft-Purview-blue)](https://learn.microsoft.com/en-us/azure/purview/)
 [![SQL Server 2022](https://img.shields.io/badge/SQL%20Server%202022-blue)](https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15)
 
-Last updated: 2025-06-19
+Last updated: 2025-07-17
 
 ---
 
@@ -21,20 +21,19 @@ Last updated: 2025-06-19
 
 </details>
 
-
 <details>
 <summary>Table of Content </summary>
 
 - [How to Integrate SQL Server 2022 with Purview](#how-to-integrate-sql-server-2022-with-purview)
-    - [Registering the SQL Server Database in Purview](#registering-the-sql-server-database-in-purview)
-    - [Enabling Unity Data Governance](#enabling-unity-data-governance)
-    - [Data Classification and Labeling](#data-classification-and-labeling)
+  - [Registering the SQL Server Database in Purview](#registering-the-sql-server-database-in-purview)
+  - [Enabling Unity Data Governance](#enabling-unity-data-governance)
+  - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
-    - [Steps to Integrate](#steps-to-integrate)
-    - [Benefits](#benefits)
+  - [Steps to Integrate](#steps-to-integrate)
+  - [Benefits](#benefits)
 
 </details>
 
@@ -69,6 +68,7 @@ Last updated: 2025-06-19
 > Prevent unauthorized export of customer personally identifiable information (PII).
 
 **Steps:**
+
 1. **Create a DLP Policy:** In Purview, define a policy targeting tables/columns with PII (e.g., email, SSN).
 2. **Define Detection Rules:** Use built-in or custom classifiers to identify PII fields.
 3. **Set Actions:**  
@@ -84,6 +84,7 @@ Last updated: 2025-06-19
 > Prevent unauthorized access or leak of payroll, tax records, and bank account data.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Target tables like `Payroll`, `Invoices`, or `TaxDocuments`.
 2. **Define Detection Rules:** Use financial classifiers to detect fields like `account_number`, `routing_number`, `salary`, etc.
 3. **Set Actions:**  
@@ -99,6 +100,7 @@ Last updated: 2025-06-19
 > Protect proprietary formulas, product designs, or source code stored in SQL Server.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Focus on R&D tables like `ProductDesign`, `AlgorithmSpecs`, or `Blueprints`.
 2. **Define Detection Rules:** Customize classifiers using keywords or phrases tied to internal IP.
 3. **Set Actions:**  
@@ -114,6 +116,7 @@ Last updated: 2025-06-19
 > Comply with healthcare regulations by securing patient records and medical history.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Target tables containing `diagnosis_codes`, `treatment_notes`, or `insurance_info`.
 2. **Define Detection Rules:** Enable built-in classifiers for HIPAA-related entities such as `Patient ID`, `Diagnosis`, `Prescriptions`.
 3. **Set Actions:**  
@@ -127,6 +130,7 @@ Last updated: 2025-06-19
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
+>
 > - **Data Map** (capacity units, always-on)
 > - **Scanning** (pay-as-you-go, based on vCore usage and scan duration)
 > - **Managed Virtual Network** and **API/Data Transfer** costs for cross-cloud governance

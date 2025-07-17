@@ -26,7 +26,6 @@ Last updated: 2025-07-17
   - [Metadata and Lineage Scanning](#metadata-and-lineage-scanning)
   - [Classification and Labeling](#classification-and-labeling)
 - [Governance and DLP Controls](#governance-and-dlp-controls)
-  - [Examples of DLP Policies](#examples-of-dlp-policies)
 - [Cost Insights](#cost-insights)
 - [Governance Best Practices](#governance-best-practices)
 - [Unity Catalog Integration](#unity-catalog-integration)
@@ -64,6 +63,7 @@ Last updated: 2025-07-17
 > Apply governance to `customers`, `leads`, `interactions`.
 
 **Steps:**
+
 1. **Classify Fields:** `customer_name`, `contact_info`, `lead_source`.
 2. **Set Policy Triggers:** Block JSON exports exceeding 100 records/hour.
 3. **Apply Actions:**  
@@ -79,6 +79,7 @@ Last updated: 2025-07-17
 > Secure forecasting models stored in `budgets`, `models`, `assumptions`.
 
 **Steps:**
+
 1. **Scope:** Forecasted revenue, cost-of-sales fields.
 2. **Detection Rules:** Numeric limits, field tags (e.g., `model_id`, `confidence_score`).
 3. **Actions:**  
@@ -94,6 +95,7 @@ Last updated: 2025-07-17
 > Protect legal content in `contracts`, `legal_reviews`, `negotiations`.
 
 **Steps:**
+
 1. **Tag Fields:** `contract_number`, `counterparty`, `signature_date`.
 2. **Policy Actions:**  
    - Restrict full-text searches by non-legal roles.  
@@ -108,6 +110,7 @@ Last updated: 2025-07-17
 > Manage telemetry in `events`, `device_stats`, `system_logs`.
 
 **Steps:**
+
 1. **Classify Columns:** Device IDs, geographic coordinates.
 2. **Policies:**  
    - Mask PII from telemetry streams ingested via Event Hubs.  
@@ -153,7 +156,7 @@ Last updated: 2025-07-17
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-31-limegreen" alt="Total views">
-  <p>Refresh Date: 2025-07-16</p>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
 <!-- END BADGE -->

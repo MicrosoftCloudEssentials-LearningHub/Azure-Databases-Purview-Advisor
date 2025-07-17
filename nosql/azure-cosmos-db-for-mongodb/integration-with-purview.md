@@ -64,6 +64,7 @@ Last updated: 2025-07-17
 > Protect customer and employee profile data stored in `user_data`, `accounts`, `profiles` collections.
 
 **Steps:**
+
 1. **Define a DLP Policy:** Target collections with sensitive document schemas.
 2. **Set Detection Parameters:** Trigger on PII, credentials, and contact information fields.
 3. **Policy Actions:**  
@@ -79,6 +80,7 @@ Last updated: 2025-07-17
 > Safeguard financial data in `payments`, `invoices`, `billing_records`.
 
 **Steps:**
+
 1. **Define Policy Scope:** Look for fields like `credit_card`, `billing_address`, and `transaction_id`.
 2. **Detection:** Use built-in financial data classifiers.
 3. **Policy Actions:**  
@@ -94,6 +96,7 @@ Last updated: 2025-07-17
 > Protect personal health information (PHI) within `patients`, `treatment_history`, and `medications`.
 
 **Steps:**
+
 1. **Policy Creation:** Include diagnosis codes and treatment plans.
 2. **PHI Detection:** Use custom tags like `diagnosis`, `symptoms`, `prescription_id`.
 3. **Actions:**  
@@ -109,6 +112,7 @@ Last updated: 2025-07-17
 > Secure data in `hr`, `payroll`, and `performance_reviews` collections.
 
 **Steps:**
+
 1. **Scope:** Apply to fields like `salary`, `review_score`, `benefit_plan`.
 2. **Detection:** Match on numerical ranges and string pattern validation (e.g., ID formats).
 3. **Actions:**  
@@ -124,6 +128,7 @@ Last updated: 2025-07-17
 > Protect sensitive legal content in `case_files`, `legal_memos`, and `contracts`.
 
 **Steps:**
+
 1. **Classifier Setup:** Identify documents referencing legal codes, client names, settlement terms.
 2. **Actions:**  
    - Encrypt entire documents upon detection.  
@@ -170,7 +175,7 @@ Last updated: 2025-07-17
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-31-limegreen" alt="Total views">
-  <p>Refresh Date: 2025-07-16</p>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
 <!-- END BADGE -->

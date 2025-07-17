@@ -6,7 +6,7 @@ Costa Rica
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [brown9804](https://github.com/brown9804)
 
-Last updated: 2025-06-03
+Last updated: 2025-07-17
 
 ----------
 
@@ -22,17 +22,20 @@ Last updated: 2025-06-03
 </details>
 
 ## Features
+
 - **Managed Service**: Automates database management tasks such as backups, patching, and scaling.
 - **High Availability**: Built-in high availability with a 99.99% SLA.
 - **Scalability**: Easily scale up or down based on application needs.
 - **Security**: Advanced security features including threat detection and encryption.
 
 ## Use Cases
+
 - Web applications requiring a robust database backend.
 - Mobile applications needing a scalable and reliable data store.
 - Enterprise applications that require high availability and disaster recovery.
 
 ## Sample Code Snippet
+
 ```csharp
 using System;
 using System.Data.SqlClient;
@@ -94,8 +97,9 @@ class Program
 
 </details>
 
-
+<!-- START BADGE -->
 <div align="center">
-  <h3 style="color: #4CAF50;">Total Visitors</h3>
-  <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
+<!-- END BADGE -->

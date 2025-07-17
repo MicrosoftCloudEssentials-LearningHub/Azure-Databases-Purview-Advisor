@@ -31,7 +31,6 @@ Last updated: 2025-07-17
 
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/da6ef80f-7ca8-456a-993d-a6d40bb28c53" />
 
-
 - Select `Policies` > `Create policy`:
 
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/85f706eb-276e-4f7f-998f-f44bcf8fbfc3" />
@@ -39,7 +38,6 @@ Last updated: 2025-07-17
 - Choose a template or create a custom policy based on your organization's needs.
 
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/b4128763-851e-46ee-8a74-fdf189fa8762">
-
 
 ## Define Policy Scope
 
@@ -56,9 +54,7 @@ Last updated: 2025-07-17
 
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/bab1c3cf-2bc0-4646-aa8f-92805d68e30f" />
 
-        
-  https://github.com/user-attachments/assets/a9165b97-f197-4f37-877e-9776015a3297
-
+  <https://github.com/user-attachments/assets/a9165b97-f197-4f37-877e-9776015a3297>
 
 ## Set Up Alerts and Notifications
 
@@ -71,7 +67,7 @@ Last updated: 2025-07-17
 
 ## Customize access and override settings
 
-https://github.com/user-attachments/assets/eb3d57d3-5bef-43f2-b069-1d25c3ef047b
+<https://github.com/user-attachments/assets/eb3d57d3-5bef-43f2-b069-1d25c3ef047b>
 
 ## Test and Deploy the Policy
 
@@ -81,7 +77,7 @@ https://github.com/user-attachments/assets/eb3d57d3-5bef-43f2-b069-1d25c3ef047b
 
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/944945f0-ad0c-49ea-b157-47613c48590b" />
 
-    https://github.com/user-attachments/assets/0a38b331-33e8-4e15-96be-3edbe79119f6
+    <https://github.com/user-attachments/assets/0a38b331-33e8-4e15-96be-3edbe79119f6>
 
 ## Monitor and Manage Policies
 
@@ -95,7 +91,7 @@ https://github.com/user-attachments/assets/eb3d57d3-5bef-43f2-b069-1d25c3ef047b
      
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-31-limegreen" alt="Total views">
-  <p>Refresh Date: 2025-07-16</p>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
 <!-- END BADGE -->

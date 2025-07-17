@@ -6,7 +6,7 @@ Costa Rica
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [brown9804](https://github.com/brown9804)
 
-Last updated: 2025-06-03
+Last updated: 2025-07-17
 
 ----------
 
@@ -45,6 +45,7 @@ Last updated: 2025-06-03
 - **Custom Applications**: Suitable for applications requiring specific SQL Server features not available in PaaS offerings.
 
 ## Sample Code Snippet
+
 ```bash
 # Create a new SQL Server VM in Azure
 az vm create \
@@ -61,6 +62,7 @@ az vm create \
 > Running SQL Server on Azure VMs (IaaS) gives you **full control** over the OS, SQL Server instance, and configuration—ideal for lift-and-shift scenarios or legacy workloads. In contrast, **PaaS solutions** like Azure SQL Database or Managed Instance abstract away infrastructure management, offering built-in high availability, automated backups, and scalability.
 
 **Key Implications:**
+
 - **Management Overhead**: Azure VMs require patching, backup configuration, and manual HA setup. PaaS handles these automatically.
 - **Feature Compatibility**: SQL Server on VMs supports full SQL Server features (e.g., cross-database queries, CLR, SQL Agent), while PaaS may have limitations.
 - **Cost and Licensing**: VMs offer BYOL flexibility and predictable costs for long-running workloads. PaaS may be more cost-effective for variable or bursty workloads.
@@ -79,7 +81,6 @@ az vm create \
   - Use **Azure Site Recovery (ASR)** to replicate VMs for full-stack failover.
   - For hybrid scenarios, combine **SQL Server Failover Cluster Instances (FCIs)** with ASR or backup-based DR.
 - **Monitoring & Alerts**: Integrate with **Azure Monitor** and **Log Analytics** to track backup success, job failures, and RPO/RTO compliance.
-
 
 ## Performance Tuning Techniques for SQL Server in a Virtualized Environment
 

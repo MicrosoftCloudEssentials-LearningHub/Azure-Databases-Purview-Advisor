@@ -30,6 +30,7 @@ Last updated: 2025-07-17
 
 > [!IMPORTANT]
 > The general formula to keep in mind for estimating the cost of Microsoft Purview is: <br/> 
+>
 > - **Cost of Data Map**: Calculated based on the number of capacity units and the price per capacity unit per hour. <br/>
 > - **Cost of Scanning**: Calculated based on the total duration (in minutes) of all scans in a month, divided by 60 minutes per hour, multiplied by the number of vCores per scan, and the price per vCore per hour. <br/>
 > - **Cost of Resource Set**: Calculated based on the total duration (in hours) of processing resource set data assets in a month, multiplied by the price per vCore per hour.
@@ -38,26 +39,29 @@ Last updated: 2025-07-17
  $$ 
 
 1. Data Map (Always on):
-  - Number of Capacity Units: Typically 1
-  - Total Hours in a Month: 730 hours
-  - Price per Capacity Unit per Hour: \$0.411
+
+- Number of Capacity Units: Typically 1
+- Total Hours in a Month: 730 hours
+- Price per Capacity Unit per Hour: \$0.411
 
   $$
   \text{Total Cost for Data Map} = \text{Number of Capacity Units} \times \text{Total Hours in a Month} \times \text{Price per Capacity Unit per Hour}
   $$
 
 2. Scanning (Pay as you go):
-  - Total Minutes of Scanning in a Month: [M] minutes
-  - Number of vCores per Scan: 32
-  - Price per vCore per Hour: \$0.63
+
+- Total Minutes of Scanning in a Month: [M] minutes
+- Number of vCores per Scan: 32
+- Price per vCore per Hour: \$0.63
 
   $$
   \text{Total Cost for Scanning} = \left( \frac{\text{Total Minutes of Scanning in a Month}}{60} \right) \times \text{Number of vCores per Scan} \times \text{Price per vCore per Hour}
   $$
 
 3. Resource Set:
-  - Total Hours of Processing in a Month: [H] hours
-  - Price per vCore per Hour: \$0.21
+
+- Total Hours of Processing in a Month: [H] hours
+- Price per vCore per Hour: \$0.21
 
   $$
   \text{Total Cost for Resource Set} = \text{Total Hours of Processing in a Month} \times \text{Price per vCore per Hour}
@@ -117,10 +121,11 @@ $$
 ## Cost Estimation for Different Metadata Volumes
 
 > [!IMPORTANT]
->  Microsoft Purview `scans metadata to classify, label, and protect data assets`. It does `not scan the actual data content but rather the information about the data`. <br/>
->  `The size of the data itself does not directly` impact the cost of `metadata scanning unless it affects the amount of metadata generated`. The `number of metadata assets and their complexity` are the primary factors influencing costs.
+> Microsoft Purview `scans metadata to classify, label, and protect data assets`. It does `not scan the actual data content but rather the information about the data`. <br/>
+> `The size of the data itself does not directly` impact the cost of `metadata scanning unless it affects the amount of metadata generated`. The `number of metadata assets and their complexity` are the primary factors influencing costs.
 
 Assumptions: 
+
 - The number of metadata assets is assumed based on the data volume, with an average size of 1 MB per metadata asset. 
 - The average size of each metadata asset is assumed to be 1 MB. 
 - These estimates are based on the assumption that the governed assets and data management costs are applied for 100 hours per month. Actual costs may vary based on specific agreements with Microsoft, usage patterns, etc. 
@@ -145,7 +150,7 @@ Assumptions:
 - Include **Managed Virtual Network** and **data transfer** costs if applicable.
 - Get a **real-time, region-specific estimate** (e.g., for Costa Rica or any other region).
 
-  https://github.com/user-attachments/assets/05521c11-6666-4fc8-9046-14d6958798ef
+  <https://github.com/user-attachments/assets/05521c11-6666-4fc8-9046-14d6958798ef>
 
 ## Additional Considerations
 
@@ -161,7 +166,7 @@ Assumptions:
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-31-limegreen" alt="Total views">
-  <p>Refresh Date: 2025-07-16</p>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
 <!-- END BADGE -->

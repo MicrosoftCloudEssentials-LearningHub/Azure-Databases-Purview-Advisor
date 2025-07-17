@@ -23,15 +23,15 @@ Last updated: 2025-07-17
 <summary>Table of Content</summary>
 
 - [How to Integrate Azure Cache for Redis with Purview](#how-to-integrate-azure-cache-for-redis-with-purview)
-    - [Registering the Redis Cache in Purview](#registering-the-redis-cache-in-purview)
-    - [Enabling Unity Data Governance](#enabling-unity-data-governance)
-    - [Data Classification and Labeling](#data-classification-and-labeling)
+  - [Registering the Redis Cache in Purview](#registering-the-redis-cache-in-purview)
+  - [Enabling Unity Data Governance](#enabling-unity-data-governance)
+  - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
-    - [Steps to Integrate](#steps-to-integrate)
-    - [Benefits](#benefits)
+  - [Steps to Integrate](#steps-to-integrate)
+  - [Benefits](#benefits)
       
 </details>
 
@@ -66,6 +66,7 @@ Last updated: 2025-07-17
 > Safeguard user session data stored in Redis.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Apply to `session_data`, `user_tokens`, and `cache_keys`.
 2. **Define Detection Rules:** Use classifiers for sensitive tokens, user identifiers, and session metadata.
 3. **Set Actions:**  
@@ -78,12 +79,14 @@ Last updated: 2025-07-17
 ## Cost Management and Budgeting
 
 > [!NOTE]
+>
 > - Costs may vary based on region, scan frequency, and data volume.
 > - Use [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) for precise estimates.
 > - Set up budgets and alerts in [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/) to avoid overruns.
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
+>
 > - **Data Map** (capacity units, always-on)
 > - **Scanning** (pay-as-you-go, based on vCore usage and scan duration)
 > - **Managed Virtual Network** and **API/Data Transfer** costs for cross-cloud governance
@@ -123,7 +126,7 @@ Last updated: 2025-07-17
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-31-limegreen" alt="Total views">
-  <p>Refresh Date: 2025-07-16</p>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
 <!-- END BADGE -->

@@ -29,14 +29,14 @@ Last updated: 2025-07-17
 <summary><b>Table of Content</b> (Click to expand)</summary>
 
 - [Latest Announcements](#latest-announcements)
-    - [Microsoft Build 2025](#microsoft-build-2025)
-    - [May 2025 Release](#may-2025-release)
-    - [Microsoft Ignite 2024](#microsoft-ignite-2024)
-    - [Microsoft Build 2024](#microsoft-build-2024)
+  - [Microsoft Build 2025](#microsoft-build-2025)
+  - [May 2025 Release](#may-2025-release)
+  - [Microsoft Ignite 2024](#microsoft-ignite-2024)
+  - [Microsoft Build 2024](#microsoft-build-2024)
 - [Feature Highlights](#feature-highlights)
-    - [High Availability & Disaster Recovery](#high-availability--disaster-recovery)
-    - [Security & Compliance](#security--compliance)
-    - [Developer Productivity](#developer-productivity)
+  - [High Availability & Disaster Recovery](#high-availability--disaster-recovery)
+  - [Security & Compliance](#security--compliance)
+  - [Developer Productivity](#developer-productivity)
 - [Best Practices](#best-practices)
 
 </details>
@@ -64,7 +64,6 @@ Last updated: 2025-07-17
 - **Managed Instance Link Enhancements**: Improved bidirectional replication between SQL Server 2022 and SQL MI for hybrid DR and migration scenarios.  
 - **SDK-Style SQL Projects**: Support for cross-platform CI/CD pipelines using Microsoft.Build.Sql in Azure Data Studio and VS Code.
 
-
 ## Feature Highlights
 
 ### High Availability & Disaster Recovery
@@ -85,7 +84,6 @@ Last updated: 2025-07-17
 - SDK-style SQL projects for DevOps pipelines.  
 - Database Watcher for deep performance insights.
 
-
 ## Best Practices
 
 - **Choose the right update policy**: Use “Always-up-to-date” for innovation, or “SQL Server 2022” for compatibility.  
@@ -97,7 +95,7 @@ Last updated: 2025-07-17
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-31-limegreen" alt="Total views">
-  <p>Refresh Date: 2025-07-16</p>
+  <img src="https://img.shields.io/badge/Total%20views-2-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-17</p>
 </div>
 <!-- END BADGE -->
