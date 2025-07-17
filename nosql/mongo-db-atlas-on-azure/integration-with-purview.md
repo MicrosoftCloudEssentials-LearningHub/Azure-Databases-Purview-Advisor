@@ -26,7 +26,6 @@ Last updated: 2025-07-17
   - [Metadata and Lineage Scanning](#metadata-and-lineage-scanning)
   - [Classification and Labeling](#classification-and-labeling)
 - [Governance and DLP Controls](#governance-and-dlp-controls)
-  - [Examples of DLP Policies](#examples-of-dlp-policies)
 - [Cost Insights](#cost-insights)
 - [Governance Best Practices](#governance-best-practices)
 - [Unity Catalog Integration](#unity-catalog-integration)
