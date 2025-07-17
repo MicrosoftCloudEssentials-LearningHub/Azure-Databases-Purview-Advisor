@@ -18,7 +18,6 @@ Last updated: 2025-07-17
 
 </details>
 
-
 > [!IMPORTANT]
 > The [Azure Databases Advisor Tool](https://microsoftcloudessentials-learninghub.github.io/Azure-Databases-Purview-Advisor/) is designed to help users select the most suitable Azure database service based on their specific use case. It provides recommendations by analyzing user inputs such as data type, scalability needs, latency requirements, and more.
 > The information provided and any document (such as scripts, sample codes, etc.) is provided `AS-IS` and `WITH ALL FAULTS`. Pricing estimates are for `demonstration purposes only and do not reflect final pricing`. `Microsoft assumes no liability` for your use of this information and makes no guarantees or warranties, expressed or implied, regarding its accuracy or completeness, including any pricing details. `Please note that these demos are intended as a guide and are based on personal experiences. For official guidance, support, or more detailed information, please refer to Microsoft's official documentation or contact Microsoft directly`: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
@@ -33,29 +32,28 @@ Last updated: 2025-07-17
 <summary><b>Details</b> (Click to expand)</summary>
 
 > - **Formats**<br/>
->     - Structured: Stored in predefined formats like rows and columns with consistent schema enforcement.<br/>
->     - Unstructured: Exists in diverse formats like free text, images, audio, video, and documents that lack a formal structure.<br/>
+>   - Structured: Stored in predefined formats like rows and columns with consistent schema enforcement.<br/>
+>   - Unstructured: Exists in diverse formats like free text, images, audio, video, and documents that lack a formal structure.<br/>
 > - **Storage Model**<br/>
->     - Structured: Uses rigid, predefined schemas in relational databases ensuring integrity and data validation.<br/>
->     - Unstructured: Stored in flexible formats such as object storage, document stores, or blob storage without a fixed schema.<br/>
+>   - Structured: Uses rigid, predefined schemas in relational databases ensuring integrity and data validation.<br/>
+>   - Unstructured: Stored in flexible formats such as object storage, document stores, or blob storage without a fixed schema.<br/>
 > - **Databases**<br/>
->     - Structured: Managed through SQL-based systems like Azure SQL, MySQL, and PostgreSQL.<br/>
->     - Unstructured: Supported by NoSQL systems like Cosmos DB, MongoDB, and cloud-native data lakes.<br/>
+>   - Structured: Managed through SQL-based systems like Azure SQL, MySQL, and PostgreSQL.<br/>
+>   - Unstructured: Supported by NoSQL systems like Cosmos DB, MongoDB, and cloud-native data lakes.<br/>
 > - **Ease of Search**<br/>
->     - Structured: Easily queried using SQL, indexing, and standardized query languages.<br/>
->     - Unstructured: Requires more advanced approaches like keyword extraction, OCR, or AI-assisted search tools.<br/>
+>   - Structured: Easily queried using SQL, indexing, and standardized query languages.<br/>
+>   - Unstructured: Requires more advanced approaches like keyword extraction, OCR, or AI-assisted search tools.<br/>
 > - **Analysis Methods**<br/>
->     - Structured: Suited for quantitative techniques, including statistical modeling, trend analysis, and aggregation.<br/>
->     - Unstructured: Often analyzed with qualitative approaches like NLP, sentiment analysis, topic modeling, or deep learning.<br/>
+>   - Structured: Suited for quantitative techniques, including statistical modeling, trend analysis, and aggregation.<br/>
+>   - Unstructured: Often analyzed with qualitative approaches like NLP, sentiment analysis, topic modeling, or deep learning.<br/>
 > - **Tools and Technologies**<br/>
->     - Structured: RDBMS (SQL Server, Oracle), OLTP systems, CRM platforms, and OLAP tools for analytics.<br/>
->     - Unstructured: NoSQL DBMS, data mining frameworks, ML pipelines, AI services, and visualization platforms like Power BI.<br/>
+>   - Structured: RDBMS (SQL Server, Oracle), OLTP systems, CRM platforms, and OLAP tools for analytics.<br/>
+>   - Unstructured: NoSQL DBMS, data mining frameworks, ML pipelines, AI services, and visualization platforms like Power BI.<br/>
 > - **Specialists**<br/>
->     - Structured: Typically handled by business analysts, software engineers, solution architects, and DBAs.<br/>
->     - Unstructured: Requires data scientists, AI/ML specialists, information architects, and advanced data engineers.<br/>
+>   - Structured: Typically handled by business analysts, software engineers, solution architects, and DBAs.<br/>
+>   - Unstructured: Requires data scientists, AI/ML specialists, information architects, and advanced data engineers.<br/>
 
 </details>
-
 
 ## Products/Services 
 
@@ -127,7 +125,7 @@ Click here to read more about a [quick guide on SQL Server on Azure Virtual Mach
 <details>
 <summary><b>Azure Database for PostgreSQL</b> (PaaS) - Click to expand </summary>
 
->  Enterprise-ready community PostgreSQL database service, fully managed by Microsoft.
+> Enterprise-ready community PostgreSQL database service, fully managed by Microsoft.
 
 > - **Benefits:** High availability with up to 99.99% SLA, built-in security, and scalability.<br/>
 > - **Differentiators:** Supports PostgreSQL extensions and advanced indexing options.<br/>
@@ -169,7 +167,7 @@ Click here to read more about a [quick guide on Oracle Database on Azure](./sql/
 <details>
 <summary><b>SQL Server 2022</b> (IaaS) - Click to expand </summary>
 
->  Latest release of SQL Server with built-in hybrid and cloud-connected capabilities.
+> Latest release of SQL Server with built-in hybrid and cloud-connected capabilities.
 
 > - **Benefits:** Brings innovations like ledger tables, Synapse Link, and built-in security enhancements.<br/>
 > - **Differentiators:** Full hybrid flexibility for modern apps with backward compatibility.<br/>
@@ -197,7 +195,7 @@ Click here to read more about a [quick guide on Azure Cosmos DB](./nosql/azure-c
 <details>
 <summary><b>Azure Managed Instance for Apache Cassandra</b> (PaaS) - Click to expand </summary>
 
->  Managed Cassandra database service designed for massive scale and availability.
+> Managed Cassandra database service designed for massive scale and availability.
 
 > - **Benefits:** Built-in automation, scalability, and hybrid deployment options.<br/>
 > - **Differentiators:** Supports native Cassandra drivers and schemas with Azure-managed benefits.<br/>

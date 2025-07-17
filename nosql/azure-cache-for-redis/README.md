@@ -12,7 +12,6 @@ Last updated: 2025-07-17
 
 > Azure Cache for Redis provides a fully managed, in-memory data store that enables high-performance and scalable caching solutions.
 
-
 <details>
 <summary>Table of Content</summary>
 

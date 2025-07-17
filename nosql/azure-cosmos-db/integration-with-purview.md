@@ -23,15 +23,15 @@ Last updated: 2025-07-17
 <summary>Table of Content</summary>
 
 - [How to Integrate Azure Cosmos DB with Purview](#how-to-integrate-azure-cosmos-db-with-purview)
-    - [Registering the Cosmos DB in Purview](#registering-the-cosmos-db-in-purview)
-    - [Enabling Unity Data Governance](#enabling-unity-data-governance)
-    - [Data Classification and Labeling](#data-classification-and-labeling)
+  - [Registering the Cosmos DB in Purview](#registering-the-cosmos-db-in-purview)
+  - [Enabling Unity Data Governance](#enabling-unity-data-governance)
+  - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
-    - [Steps to Integrate](#steps-to-integrate)
-    - [Benefits](#benefits)
+  - [Steps to Integrate](#steps-to-integrate)
+  - [Benefits](#benefits)
       
 </details>
 
@@ -66,6 +66,7 @@ Last updated: 2025-07-17
 > Safeguard user profile data stored in Cosmos DB.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Apply to `user_profiles`, `preferences`, and `activity_logs`.
 2. **Define Detection Rules:** Use classifiers for sensitive tokens, user identifiers, and session metadata.
 3. **Set Actions:**  
@@ -78,12 +79,14 @@ Last updated: 2025-07-17
 ## Cost Management and Budgeting
 
 > [!NOTE]
+>
 > - Costs may vary based on region, scan frequency, and data volume.
 > - Use [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) for precise estimates.
 > - Set up budgets and alerts in [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/) to avoid overruns.
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
+>
 > - **Data Map** (capacity units, always-on)
 > - **Scanning** (pay-as-you-go, based on vCore usage and scan duration)
 > - **Managed Virtual Network** and **API/Data Transfer** costs for cross-cloud governance

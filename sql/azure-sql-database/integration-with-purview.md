@@ -25,15 +25,15 @@ Last updated: 2025-07-17
 <summary>Table of Content</summary>
 
 - [How to Integrate Azure SQL Database with Purview](#how-to-integrate-azure-sql-database-with-purview)
-   - [Registering the SQL Database in Purview](#registering-the-sql-database-in-purview)
-   - [Enabling Unity Data Governance](#enabling-unity-data-governance)
-   - [Data Classification and Labeling](#data-classification-and-labeling)
+  - [Registering the SQL Database in Purview](#registering-the-sql-database-in-purview)
+  - [Enabling Unity Data Governance](#enabling-unity-data-governance)
+  - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
-   - [Steps to Integrate](#steps-to-integrate)
-   - [Benefits](#benefits)
+  - [Steps to Integrate](#steps-to-integrate)
+  - [Benefits](#benefits)
 
 </details>
 
@@ -68,6 +68,7 @@ Last updated: 2025-07-17
 > Secure sensitive information submitted during user registration flows.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Apply to tables like `UserAccounts`, `RegistrationForms`, or `NewCustomers`.
 2. **Define Detection Rules:** Detect fields like name, email, contact number, and national IDs.
 3. **Set Actions:**  
@@ -83,6 +84,7 @@ Last updated: 2025-07-17
 > Restrict access to localized customer data based on geographic region (e.g., Costa Rica customers).
 
 **Steps:**
+
 1. **Create a DLP Policy:** Filter tables like `Orders`, `SupportRequests`, or `UserPreferences` with `country_code = 'CR'`.
 2. **Define Detection Rules:** Use country-based tagging and IP-based access logging.
 3. **Set Actions:**  
@@ -98,6 +100,7 @@ Last updated: 2025-07-17
 > Safeguard subjective customer inputs that may contain unstructured PII.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Apply to columns like `feedback_text`, `support_notes`, or `survey_responses`.
 2. **Define Detection Rules:** Use natural language classifiers to identify PII embedded in comments.
 3. **Set Actions:**  
@@ -111,6 +114,7 @@ Last updated: 2025-07-17
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
+>
 > - **Data Map** (capacity units, always-on)
 > - **Scanning** (pay-as-you-go, based on vCore usage and scan duration)
 > - **Managed Virtual Network** and **API/Data Transfer** costs for cross-cloud governance
@@ -120,6 +124,7 @@ Last updated: 2025-07-17
 > Click here to understand more about [Azure Purview Cost Estimation](../../Purview/Cost-Estimation.md)
 
 > [!NOTE]
+>
 > - Costs may vary based on region, scan frequency, and data volume.
 > - Use [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) for precise estimates.
 > - Set up budgets and alerts in [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/) to avoid overruns.

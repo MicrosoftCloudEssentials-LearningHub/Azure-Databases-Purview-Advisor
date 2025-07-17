@@ -38,11 +38,13 @@ Last updated: 2025-07-17
 </details>
 
 ## Benefits
+
 - **Flexibility**: Offers full control over the database environment, allowing for customization based on specific application needs.
 - **High Availability**: Ensures that Oracle applications remain available with built-in redundancy and failover capabilities.
 - **Cost Efficiency**: Allows organizations to utilize existing Oracle licenses, reducing overall costs.
 
 ## Use Cases
+
 - Running core enterprise Oracle applications that require high availability and performance.
 - Migrating legacy Oracle applications to the cloud for improved scalability and management.
 

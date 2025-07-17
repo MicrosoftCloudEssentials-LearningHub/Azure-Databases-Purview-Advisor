@@ -25,15 +25,15 @@ Last updated: 2025-06-19
 <summary>Table of Content</summary>
 
 - [How to Integrate SQL Server on Azure VM with Purview](#how-to-integrate-sql-server-on-azure-vm-with-purview)
-    - [Registering the SQL Server on Azure VM in Purview](#registering-the-sql-server-on-azure-vm-in-purview)
-    - [Enabling Unity Data Governance](#enabling-unity-data-governance)
-    - [Data Classification and Labeling](#data-classification-and-labeling)
+  - [Registering the SQL Server on Azure VM in Purview](#registering-the-sql-server-on-azure-vm-in-purview)
+  - [Enabling Unity Data Governance](#enabling-unity-data-governance)
+  - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
-    - [Steps to Integrate](#steps-to-integrate)
-    - [Benefits](#benefits)
+  - [Steps to Integrate](#steps-to-integrate)
+  - [Benefits](#benefits)
   
 </details>
 
@@ -68,6 +68,7 @@ Last updated: 2025-06-19
 > Control export of sensitive data from Azure-hosted SQL Server in Costa Rica to other regions.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Target columns with geo-sensitive data (e.g., address, tax ID) in tables like `CustomerProfiles` or `LocalTaxRecords`.
 2. **Define Detection Rules:** Use built-in geography classifiers or custom location filters.
 3. **Set Actions:**  
@@ -83,6 +84,7 @@ Last updated: 2025-06-19
 > Detect suspicious DLP policy changes or overrides made via elevated SQL Server roles.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Monitor admin actions on high-risk tables or rows marked as classified.
 2. **Define Detection Rules:** Audit DDL/DML operations through SQL logs with extended audit policies.
 3. **Set Actions:**  
@@ -98,6 +100,7 @@ Last updated: 2025-06-19
 > Identify and block unauthorized data movement to unmanaged apps or storage targets.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Focus on exports to unknown endpoints (e.g., personal OneDrive, rogue FTP servers).
 2. **Define Detection Rules:**  
    Use endpoint traffic patterns and Purview integration with Microsoft Defender.
@@ -113,12 +116,14 @@ Last updated: 2025-06-19
 > Integrating with Purview introduces additional costs for scanning, classification, and governance. Below is a breakdown and example budget.
 
 > [!NOTE]
+>
 > - Costs may vary based on region, scan frequency, and data volume.
 > - Use [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) for precise estimates.
 > - Set up budgets and alerts in [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/) to avoid overruns.
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
+>
 > - **Data Map** (capacity units, always-on)
 > - **Scanning** (pay-as-you-go, based on vCore usage and scan duration)
 > - **Managed Virtual Network** and **API/Data Transfer** costs for cross-cloud governance

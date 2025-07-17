@@ -64,6 +64,7 @@ Last updated: 2025-07-17
 > Secure login and session data in tables like `auth_tokens`, `user_sessions`.
 
 **Steps:**
+
 1. **Target Keyspaces/Tables:** Apply to authentication-related datasets.
 2. **Detection Rules:** Look for session IDs, refresh tokens, IP addresses.
 3. **Policy Actions:**  
@@ -79,6 +80,7 @@ Last updated: 2025-07-17
 > Protect sensitive e-commerce data in `orders`, `cart_items`, `billing`.
 
 **Steps:**
+
 1. **Scope:** Focus on fields such as `customer_id`, `product_price`, `shipping_address`.
 2. **Detection:** Classify based on customer profile info and transaction markers.
 3. **Actions:**  
@@ -94,6 +96,7 @@ Last updated: 2025-07-17
 > Restrict telemetry data in `sensor_logs`, `device_metrics`, `edge_state`.
 
 **Steps:**
+
 1. **Identify:** Detect geo-coordinates, MAC addresses, and voltage spikes.
 2. **Policy Application:** Tag location data as confidential in production.
 3. **Actions:**  
@@ -109,6 +112,7 @@ Last updated: 2025-07-17
 > Safeguard university data stored in `grades`, `student_profiles`, `transcripts`.
 
 **Steps:**
+
 1. **Target Fields:** `student_id`, `gpa`, `disciplinary_notes`.
 2. **Actions:**  
    - Mask grades from public query interfaces.  
@@ -140,7 +144,7 @@ Last updated: 2025-07-17
 
 > Use Microsoft Purview to extend Cassandra data observability across pipelines.
 
-### Steps:
+### Steps
 
 1. Register Cassandra instance in **Purview** and enable **Unity Catalog Sync**.
 2. Set up **Lineage Connectors** to link ingestion and downstream datasets (e.g., Synapse, Power BI).

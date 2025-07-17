@@ -25,19 +25,18 @@ Last updated: 2025-07-17
 <summary>Table of Content</summary>
 
 - [How to Integrate Oracle Database on Azure with Purview](#how-to-integrate-oracle-database-on-azure-with-purview)
-    - [Registering the Oracle Database in Purview](#registering-the-oracle-database-in-purview)
-    - [Enabling Unity Data Governance](#enabling-unity-data-governance)
-    - [Data Classification and Labeling](#data-classification-and-labeling)
+  - [Registering the Oracle Database in Purview](#registering-the-oracle-database-in-purview)
+  - [Enabling Unity Data Governance](#enabling-unity-data-governance)
+  - [Data Classification and Labeling](#data-classification-and-labeling)
 - [Managing DLP Data Loss Prevention Projects](#managing-dlp-data-loss-prevention-projects)
 - [Cost Management and Budgeting](#cost-management-and-budgeting)
-    - [Cost Components](#cost-components)
+  - [Cost Components](#cost-components)
 - [Best Practices](#best-practices)
 - [Integration with Purview for Unity Catalog](#integration-with-purview-for-unity-catalog)
-    - [Steps to Integrate](#steps-to-integrate)
-    - [Benefits](#benefits)
+  - [Steps to Integrate](#steps-to-integrate)
+  - [Benefits](#benefits)
 
 </details>
-
 
 ## How to Integrate Oracle Database on Azure with Purview
 
@@ -70,6 +69,7 @@ Last updated: 2025-07-17
 > Enforce data erasure requests across customer-related tables in Oracle.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Monitor and respond to deletion requests for tables like `CUSTOMERS`, `CONTACT_LOGS`, and `ACCOUNT_HISTORY`.
 2. **Define Detection Rules:** Use Purview’s data subject tagging to flag all relevant personal data fields.
 3. **Set Actions:**  
@@ -85,6 +85,7 @@ Last updated: 2025-07-17
 > Protect sensitive reconciliation and journal entry data from internal leaks.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Focus on Oracle ERP data, such as `GL_JOURNALS`, `RECON_TABLES`, or `LEDGER_ENTRIES`.
 2. **Define Detection Rules:** Apply financial data classifiers or tag custom ERP schema elements.
 3. **Set Actions:**  
@@ -100,6 +101,7 @@ Last updated: 2025-07-17
 > Secure trial participant data, dosage logs, and test results hosted in Oracle schemas.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Target schemas like `TRIAL_RESULTS`, `PATIENT_TRACKING`, or `MEDICATION_LOGS`.
 2. **Define Detection Rules:** Detect patient IDs, consent forms, and controlled substance indicators.
 3. **Set Actions:**  
@@ -117,6 +119,7 @@ Last updated: 2025-07-17
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
+>
 > - **Data Map** (capacity units, always-on)
 > - **Scanning** (pay-as-you-go, based on vCore usage and scan duration)
 > - **Managed Virtual Network** and **API/Data Transfer** costs for cross-cloud governance

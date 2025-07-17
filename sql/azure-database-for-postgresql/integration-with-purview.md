@@ -68,6 +68,7 @@ Last updated: 2025-07-17
 > Fulfill data subject requests and enforce retention policies on customer records.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Apply to tables like `customers`, `login_sessions`, `preferences`.
 2. **Define Detection Rules:** Use classifiers for names, emails, phone numbers, and IP addresses.
 3. **Set Actions:**  
@@ -83,6 +84,7 @@ Last updated: 2025-07-17
 > Protect payment records in compliance with PCI DSS or local finance laws.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Focus on tables like `transactions`, `billing_statements`, `refunds`.
 2. **Define Detection Rules:** Detect patterns like credit card numbers, bank routing codes, or IBANs.
 3. **Set Actions:**  
@@ -98,6 +100,7 @@ Last updated: 2025-07-17
 > Enforce HIPAA-equivalent practices for healthcare-related apps built on PostgreSQL.
 
 **Steps:**
+
 1. **Create a DLP Policy:** Scan tables like `medical_visits`, `patient_conditions`, `insurance_claims`.
 2. **Define Detection Rules:** Detect MRNs, ICD-10 codes, medication fields.
 3. **Set Actions:**  
@@ -112,12 +115,14 @@ Last updated: 2025-07-17
 > Integrating with Purview introduces additional costs for scanning, classification, and governance. Below is a breakdown and example budget.
 
 > [!NOTE]
+>
 > - Costs may vary based on region, scan frequency, and data volume.
 > - Use [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) for precise estimates.
 > - Set up budgets and alerts in [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/) to avoid overruns.
 
 > **Microsoft Purview Account:**: Billed per vCore-hour and per GB of data processed during scans.
 > The pricing structure is based on:
+>
 > - **Data Map** (capacity units, always-on)
 > - **Scanning** (pay-as-you-go, based on vCore usage and scan duration)
 > - **Managed Virtual Network** and **API/Data Transfer** costs for cross-cloud governance

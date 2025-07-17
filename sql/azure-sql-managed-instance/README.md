@@ -12,7 +12,6 @@ Last updated: 2025-06-03
 
 > Azure SQL Managed Instance is a fully managed SQL Server instance that provides near-complete compatibility with on-premises SQL Server. It is designed to simplify the migration of existing applications to the cloud without requiring code changes.
 
-
 <details>
 <summary>List of References</summary>
 
@@ -43,6 +42,7 @@ Last updated: 2025-06-03
 - **Compatibility**: Supports SQL Server Agent, linked servers, and cross-database transactions, making it suitable for enterprise applications.
 
 ## Use Cases
+
 - Ideal for enterprise app migrations from legacy environments.
 - Suitable for applications that require SQL Server features not available in Azure SQL Database.
 
@@ -80,7 +80,6 @@ VALUES (1, 'John', 'Doe', '2023-01-15');
 | Use Cases | Cloud-native apps | Lift-and-shift of legacy SQL workloads |
 | Linked Servers | Unsupported | Supported |
 
-
 ## Implications of Using SQL Server Agent in a Managed Instance
 
 > This support is particularly useful when trying to preserve automation behavior after migration from on-premises environments.
@@ -105,10 +104,6 @@ VALUES (1, 'John', 'Doe', '2023-01-15');
 - **Migration Tactics**:
   - Use **backup/restore to Azure Blob Storage** for full database fidelity.
   - Or use **Azure DMS with continuous sync** for minimal downtime transitions.
-
-
-
-
 
 <div align="center">
   <h3 style="color: #4CAF50;">Total Visitors</h3>

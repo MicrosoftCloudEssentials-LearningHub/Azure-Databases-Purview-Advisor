@@ -24,14 +24,15 @@ Last updated: 2025-07-17
 
 </details>
 
-
 ## Features
+
 - **High Availability**: Offers up to 99.99% SLA with built-in high availability.
 - **Automated Backups**: Daily backups with point-in-time restore capabilities.
 - **Scaling**: Easily scale compute and storage resources without downtime.
 - **Security**: Advanced security features including encryption, firewall rules, and virtual network service endpoints.
 
 ## Use Cases
+
 - Cloud-native applications using PostgreSQL frameworks like Django or Flask.
 - Applications requiring high availability and disaster recovery.
 - Development and testing environments that need quick provisioning.

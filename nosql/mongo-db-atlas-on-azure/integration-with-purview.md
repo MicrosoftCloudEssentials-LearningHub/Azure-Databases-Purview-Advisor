@@ -63,6 +63,7 @@ Last updated: 2025-07-17
 > Apply governance to `customers`, `leads`, `interactions`.
 
 **Steps:**
+
 1. **Classify Fields:** `customer_name`, `contact_info`, `lead_source`.
 2. **Set Policy Triggers:** Block JSON exports exceeding 100 records/hour.
 3. **Apply Actions:**  
@@ -78,6 +79,7 @@ Last updated: 2025-07-17
 > Secure forecasting models stored in `budgets`, `models`, `assumptions`.
 
 **Steps:**
+
 1. **Scope:** Forecasted revenue, cost-of-sales fields.
 2. **Detection Rules:** Numeric limits, field tags (e.g., `model_id`, `confidence_score`).
 3. **Actions:**  
@@ -93,6 +95,7 @@ Last updated: 2025-07-17
 > Protect legal content in `contracts`, `legal_reviews`, `negotiations`.
 
 **Steps:**
+
 1. **Tag Fields:** `contract_number`, `counterparty`, `signature_date`.
 2. **Policy Actions:**  
    - Restrict full-text searches by non-legal roles.  
@@ -107,6 +110,7 @@ Last updated: 2025-07-17
 > Manage telemetry in `events`, `device_stats`, `system_logs`.
 
 **Steps:**
+
 1. **Classify Columns:** Device IDs, geographic coordinates.
 2. **Policies:**  
    - Mask PII from telemetry streams ingested via Event Hubs.  

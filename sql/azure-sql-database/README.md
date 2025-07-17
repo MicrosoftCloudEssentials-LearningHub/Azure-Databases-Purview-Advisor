@@ -22,17 +22,20 @@ Last updated: 2025-07-17
 </details>
 
 ## Features
+
 - **Managed Service**: Automates database management tasks such as backups, patching, and scaling.
 - **High Availability**: Built-in high availability with a 99.99% SLA.
 - **Scalability**: Easily scale up or down based on application needs.
 - **Security**: Advanced security features including threat detection and encryption.
 
 ## Use Cases
+
 - Web applications requiring a robust database backend.
 - Mobile applications needing a scalable and reliable data store.
 - Enterprise applications that require high availability and disaster recovery.
 
 ## Sample Code Snippet
+
 ```csharp
 using System;
 using System.Data.SqlClient;
@@ -93,7 +96,6 @@ class Program
 - Complies with major standards such as ISO, HIPAA, and GDPR.
 
 </details>
-
 
 <!-- START BADGE -->
 <div align="center">

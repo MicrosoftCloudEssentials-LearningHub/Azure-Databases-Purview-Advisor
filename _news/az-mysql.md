@@ -15,7 +15,6 @@ Last updated: 2025-07-17
 > [!TIP]  
 > For technical deep dives and product team insights, visit the [Azure Database Blog](https://techcommunity.microsoft.com/category/azuredatabases/blog/azuredatablog).
 
-
 <details>
 <summary><b>List of References</b> (Click to expand)</summary>
 
@@ -31,18 +30,17 @@ Last updated: 2025-07-17
 <summary><b>Table of Content</b> (Click to expand)</summary>
 
 - [Latest Announcements](#latest-announcements)
-    - [Microsoft Build 2025](#microsoft-build-2025)
-    - [May 2025 Release](#may-2025-release)
-    - [Microsoft Ignite 2024](#microsoft-ignite-2024)
-    - [Microsoft Build 2024](#microsoft-build-2024)
+  - [Microsoft Build 2025](#microsoft-build-2025)
+  - [May 2025 Release](#may-2025-release)
+  - [Microsoft Ignite 2024](#microsoft-ignite-2024)
+  - [Microsoft Build 2024](#microsoft-build-2024)
 - [Feature Highlights](#feature-highlights)
-    - [High Availability & Disaster Recovery](#high-availability--disaster-recovery)
-    - [Security & Compliance](#security--compliance)
-    - [Developer Productivity](#developer-productivity)
+  - [High Availability & Disaster Recovery](#high-availability--disaster-recovery)
+  - [Security & Compliance](#security--compliance)
+  - [Developer Productivity](#developer-productivity)
 - [Best Practices](#best-practices)
 
 </details>
-
 
 ## Latest Announcements
 
@@ -77,20 +75,22 @@ Last updated: 2025-07-17
 ## Feature Highlights
 
 ### High Availability & Disaster Recovery
+
 - Zone-redundant HA with 99.99% SLA.
 - Point-in-time restore and geo-redundant backups.
 - Accelerated Logs for mission-critical throughput.
 
 ### Security & Compliance
+
 - Azure AD authentication and role-based access control.
 - Encryption at rest with customer-managed keys.
 - Private Link and VNet integration for network isolation.
 
 ### Developer Productivity
+
 - Native support for Django, Laravel, Spring Boot, and more.
 - Deep Azure Monitor integration with custom metrics and alerts.
 - Serverless compute tier (preview) for bursty or unpredictable workloads.
-
 
 ## Best Practices
 
