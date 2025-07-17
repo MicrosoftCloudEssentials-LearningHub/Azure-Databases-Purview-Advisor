@@ -98,7 +98,9 @@ CREATE TABLE employees (
 - **Fetch Size Tuning**: In hybrid or multicloud setups (e.g., Oracle DB in OCI, app in Azure), **increase fetch size** to reduce network round trips and latency.
 - **Networking**: Use **Accelerated Networking** and **Proximity Placement Groups** to reduce latency between app and DB tiers.
 
+<!-- START BADGE -->
 <div align="center">
-  <h3 style="color: #4CAF50;">Total Visitors</h3>
-  <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img src="https://img.shields.io/badge/Total%20views-9-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-16</p>
 </div>
+<!-- END BADGE -->
