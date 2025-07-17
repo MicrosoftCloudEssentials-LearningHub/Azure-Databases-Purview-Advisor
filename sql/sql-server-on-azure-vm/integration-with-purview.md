@@ -5,7 +5,7 @@ Costa Rica
 [![Microsoft Purview](https://img.shields.io/badge/Microsoft-Purview-blue)](https://learn.microsoft.com/en-us/azure/purview/)
 [![SQL Server on Azure VM](https://img.shields.io/badge/Azure-SQLServer-blue)](https://learn.microsoft.com/en-us/sql/sql-server/sql-server-on-azure-vm)
 
-Last updated: 2025-06-19
+Last updated: 2025-07-17
 
 ---
 
