@@ -4,7 +4,7 @@ Costa Rica
 
 [![Microsoft Purview](https://img.shields.io/badge/Microsoft-Purview-blue)](https://learn.microsoft.com/en-us/azure/purview/) [![Azure Cosmos DB for MongoDB](https://img.shields.io/badge/Azure-Cosmos%20DB%20for%20MongoDB-blue)](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/)
 
-Last updated: 2025-06-20
+Last updated: 2025-07-17
 
 ---
 
@@ -27,7 +27,6 @@ Last updated: 2025-06-20
   - [Scan Configuration](#scan-configuration)
   - [Classification and Labeling](#classification-and-labeling)
 - [Governance and DLP Setup](#governance-and-dlp-setup)
-  - [Example DLP Policies](#example-dlp-policies)
 - [Cost Management](#cost-management)
 - [Best Practices](#best-practices)
 - [Unity Catalog Integration](#unity-catalog-integration)
@@ -169,7 +168,9 @@ Last updated: 2025-06-20
 - Compliance-ready posture for PII, PCI, HIPAA use cases.
 - Reduced risk through discoverability and controlled data distribution.
 
+<!-- START BADGE -->
 <div align="center">
-  <h3 style="color: #4CAF50;">Total Visitors</h3>
-  <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img src="https://img.shields.io/badge/Total%20views-31-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-16</p>
 </div>
+<!-- END BADGE -->

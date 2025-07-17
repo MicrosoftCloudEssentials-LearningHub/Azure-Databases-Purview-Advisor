@@ -4,7 +4,7 @@ Costa Rica
 
 [![Microsoft Purview](https://img.shields.io/badge/Microsoft-Purview-blue)](https://learn.microsoft.com/en-us/azure/purview/) [![Azure Managed Instance for Apache Cassandra](https://img.shields.io/badge/Azure-Cassandra%20Managed%20Instance-blue)](https://learn.microsoft.com/en-us/azure/managed-instance-apache-cassandra/)
 
-Last updated: 2025-06-20
+Last updated: 2025-07-17
 
 ---
 
@@ -154,7 +154,9 @@ Last updated: 2025-06-20
 - Federated policy management from Purview to Azure services.
 - Reduced compliance risk through sensitivity tracking and reporting.
 
+<!-- START BADGE -->
 <div align="center">
-  <h3 style="color: #4CAF50;">Total Visitors</h3>
-  <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img src="https://img.shields.io/badge/Total%20views-31-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-16</p>
 </div>
+<!-- END BADGE -->
