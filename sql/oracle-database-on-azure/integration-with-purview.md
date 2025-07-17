@@ -5,7 +5,7 @@ Costa Rica
 [![Microsoft Purview](https://img.shields.io/badge/Microsoft-Purview-blue)](https://learn.microsoft.com/en-us/azure/purview/)
 [![Oracle Database on Azure](https://img.shields.io/badge/Azure-Oracle-blue)](https://learn.microsoft.com/en-us/azure/oracle/)
 
-Last updated: 2025-06-19
+Last updated: 2025-07-17
 
 ---
 
