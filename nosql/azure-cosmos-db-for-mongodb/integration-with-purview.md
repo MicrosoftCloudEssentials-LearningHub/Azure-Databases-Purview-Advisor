@@ -27,7 +27,6 @@ Last updated: 2025-07-17
   - [Scan Configuration](#scan-configuration)
   - [Classification and Labeling](#classification-and-labeling)
 - [Governance and DLP Setup](#governance-and-dlp-setup)
-  - [Example DLP Policies](#example-dlp-policies)
 - [Cost Management](#cost-management)
 - [Best Practices](#best-practices)
 - [Unity Catalog Integration](#unity-catalog-integration)
