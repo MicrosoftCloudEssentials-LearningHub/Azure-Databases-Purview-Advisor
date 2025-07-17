@@ -98,7 +98,9 @@ conn.close()
 - **Storage and I/O Optimization**: Utilize **Premium SSD v2** storage to provision throughput and IOPS independently of disk size.
 - **Built-in Query Insights**: Azure’s Query Performance Insight tool offers visuals and recommendations for tuning workloads based on real-time performance metrics.
 
+<!-- START BADGE -->
 <div align="center">
-  <h3 style="color: #4CAF50;">Total Visitors</h3>
-  <img src="https://profile-counter.glitch.me/brown9804/count.svg" alt="Visitor Count" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img src="https://img.shields.io/badge/Total%20views-9-limegreen" alt="Total views">
+  <p>Refresh Date: 2025-07-16</p>
 </div>
+<!-- END BADGE -->
